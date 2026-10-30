@@ -1,0 +1,23 @@
+<script src="{{ 'team_members.js' | asset_url }}" defer="defer"></script>
+
+{% if product.selected_or_first_available_variant.available == false %}
+  <div style="background-color: #d4e4fa;color: #2e6fcb;padding: 10px 16px;line-height: 1.356;font-weight: 400;border-radius: 4px;font-size: 14px;margin-bottom: 16px; max-width: 44rem;">
+    We are <b>OUT OF STOCK</b> but our amazing team member(s) may have it in their stock.
+  </div>
+{% endif %}
+<button
+  id="buy-from-team-button"
+  class="product-from_team button button--full-width {% if product.selected_or_first_available_variant.available == false %}button--primary{% else %}button--secondary{% endif %}"
+  data-sku="{{ product.selected_or_first_available_variant.sku }}"
+  style="max-width: 44rem;"
+>
+  <span> Buy from a team member </span>
+</button>
+<div style="margin-top: 20px; display:none;max-width: 44rem;" id="team-member-stores-container">
+  <div id="team-member-stores-content" style="display:none;">
+    <p>Click any link's below for this item.</p>
+  </div>
+
+  <div id="product-links" style="margin-top: 20px;"></div>
+</div>
+<script src="{{ 'buy-from-team.js' | asset_url }}" defer="defer"></script>

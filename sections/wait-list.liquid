@@ -1,0 +1,131 @@
+{{ 'component-cart.css' | asset_url | stylesheet_tag }}
+{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}
+{{ 'component-totals.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'component-discounts.css' | asset_url | stylesheet_tag }}
+{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+{{ 'wait-list.css' | asset_url | stylesheet_tag }}
+{{ 'wait-list.js' | asset_url | defer | script_tag }}
+
+<style type="text/css">
+  .template-404 .title + * {
+    margin-top: 1rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .template-404 .title + * {
+      margin-top: 2rem;
+    }
+  }
+</style>
+
+<div class="page-width" style="position: relative; padding-top: 2rem; padding-bottom: 4rem;">
+  {% assign current_url_path = request.path %}
+  {% if current_url_path == '/pages/wait-list' %}
+    {% if customer == null %}
+      <div class="template-404 page-width page-margin center">
+        <p>You need to be logged in to view your waitlist.</p>
+        <h1 class="title">
+          In order to see your waitlist,
+          <a href="#" id="login-link">MUST LOGIN</a>.
+        </h1>
+      </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const loginLink = document.getElementById('login-link');
+          if (loginLink) {
+            loginLink.href = `/account/login?redirect=${encodeURIComponent(window.location.href)}`;
+          }
+        });
+      </script>
+    {% else %}
+      <div class="title-wrapper-with-link">
+        <h1 class="title title--primary">Your WaitList</h1>
+        <a href="{{ routes.all_products_collection_url }}" class="underlined-link">Continue shopping</a>
+      </div>
+      <div class="cart__contents critical-hidden">
+        <div class="cart__items" id="wait-list-items">
+          <div class="js-contents">        
+            <div class="cart-items-container">
+              <!-- Loading container moved inside cart-items-container for better positioning -->
+              <div id="loading-container" class="loading-overlay hidden">
+                <div class="loading-overlay__spinner">
+                  <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                  </svg>
+                </div>
+              </div>
+              
+              <table class="cart-items">
+                <thead>
+                  <tr>
+                    <th class="caption-with-letter-spacing" scope="col">PRODUCT</th>
+                    <th class="cart-items__heading--wide text-center caption-with-letter-spacing" scope="col">Quantity</th>
+                    <th class="small-hide right caption-with-letter-spacing hidden" scope="col"><!-- Empty --></th>
+                  </tr>
+                </thead>
+                <tbody id="wait-list-table-body">
+                  <tr class="cart-item">
+                    <td class="cart-item__combined">
+                      <div class="cart-item__flex-container">
+                        <div class="cart-item__media-wrapper">
+                          <a href="#">
+                            <div class="cart-item__image-container gradient global-media-settings">
+                              <img
+                                src="{{ 'product-1' | placeholder_svg_tag }}"
+                                class="cart-item__image"
+                                alt="Placeholder"
+                                loading="lazy"
+                                width="150"
+                                height="150"
+                              >
+                            </div>
+                          </a>
+                        </div>
+                        <div class="cart-item__details-wrapper">
+                          <a href="#" class="cart-item__name h4 break">Sample Product</a>
+                          <div class="product-option">
+                            <strong>Added on:</strong> 01/01/2023
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="cart-item__quantity">
+                      <div class="cart-item__quantity-wrapper">
+                        <span class="quantity-value">1</span>
+                      </div>
+                    </td>
+                    <td class="cart-item__totals right small-hide hidden">
+                      <!-- Empty column for layout balance -->
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Wait List Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Wait List"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Wait List",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

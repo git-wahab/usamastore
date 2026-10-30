@@ -1,0 +1,96 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-search",
+      "settings": {
+        "columns_desktop": 5,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_filtering": true,
+        "filter_type": "drawer",
+        "enable_sorting": true,
+        "article_show_date": true,
+        "article_show_author": false,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "e2d77293-0f79-48e7-9acb-705bf3d97923": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--16662845915394__e2d77293-0f79-48e7-9acb-705bf3d97923-1672554167772417cf-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Suggested Color Search Terms",
+            "icon": "check_mark",
+            "row_content": "<p></p><ul><li>Brown or BNXX</li><li>Red or RDXX</li><li>Pink or PKXX</li><li>Orange or OGXX</li><li>Yellow or YWXX</li><li>Green or GRXX</li><li>Blue or BLXX</li><li>Purple or PRXX</li><li>Black or BKXX</li><li>White or WTXX</li><li>Silver or SVXX</li><li>Gold or GDXX</li><li>Copper or CPXX</li><li>Brass or BRXX</li><li>Multi or MTXX</li><li>GDRS (Rose Gold)</li><li>CPSH (Shiny Copper)</li><li>SVXX (Gray)</li></ul>",
+            "page": ""
+          }
+        },
+        "template--16662845915394__e2d77293-0f79-48e7-9acb-705bf3d97923-1672554167772417cf-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Suggested Style Bar Code Search Terms",
+            "icon": "check_mark",
+            "row_content": "<p>LEFT STYLE CODES (MUST COMBINE i.e. P2RE)</p><ul><li>P2 = Necklace</li><li>P4 = Ring</li><li>P5 = Earrings</li><li>P7 = Hair Clips</li><li>P9 = Bracelets</li></ul><p>+</p><p>RIGHT STYLE CODES (MUST COMBINE)</p><ul><li>BA = barbaric, forged look</li><li>CH = choker</li><li>CO = clip-ons</li><li>DA = dainty</li><li>DI = snap bracelet</li><li>ED = edgy</li><li>HO = hoops</li><li>IN = industrial, chains, loops</li><li>LN = lanyard</li><li>MN = mens</li><li>PO = posts</li><li>RE = regal</li><li>SE = stones and earthy</li><li>SS = hair clip</li><li>ST = super trendy</li><li>TR = tribal, aztec</li><li>WD = words</li><li>WH = whimsical, hearts, filigree, butterflies</li></ul>",
+            "page": ""
+          }
+        },
+        "template--16662845915394__e2d77293-0f79-48e7-9acb-705bf3d97923-1672554167772417cf-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Common Style Search Terms",
+            "icon": "check_mark",
+            "row_content": "<ul><li>earrings NOT necklace</li><li>necklace</li><li>ring</li><li>bracelet</li><li>hair</li><li>teardrop</li><li>pendant</li><li>fringe</li><li>layer</li><li>bead</li><li>pearl</li><li>white rhinestone</li><li>moon or moonstone</li><li>feather</li><li>stone</li><li>leather</li><li>suede</li><li>center</li><li>clasp</li><li>stretchy</li><li>double-sided (for jacket earrings)</li><li>crawler</li><li>natural</li><li>bangle</li><li>hinge</li><li>tassel</li><li>\"dainty stretchy\" (for skinny band)</li><li>acrylic</li><li>cuff</li><li>circle</li><li>and any other  obvious terms (butterfly, heart, oil spill, etc)</li></ul>",
+            "page": ""
+          }
+        },
+        "template--16662845915394__e2d77293-0f79-48e7-9acb-705bf3d97923-1672554167772417cf-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Additional Searching Tips",
+            "icon": "check_mark",
+            "row_content": "<ul><li>Search sees hyphens (-) as spaces, so you can search by chunks of the sku (i.e. P2RE or BKXX or 145XX)</li><li>All SKU's end in XX, unless they are part of a set</li><li>At the end of your search words add \" NOT \" to eliminate possibilities (i.e. NOT pendant to eliminate pendants from your search)</li><li>Use \" NOT necklace\" when searching for earrings</li><li>If you're having difficulty, try removing color search terms and find in another color. Then you will know the name and can search by name</li><li>Please report any unlisted items, so I can update my website</li></ul>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16662845915394__e2d77293-0f79-48e7-9acb-705bf3d97923-1672554167772417cf-0",
+        "template--16662845915394__e2d77293-0f79-48e7-9acb-705bf3d97923-1672554167772417cf-1",
+        "template--16662845915394__e2d77293-0f79-48e7-9acb-705bf3d97923-1672554167772417cf-2",
+        "template--16662845915394__e2d77293-0f79-48e7-9acb-705bf3d97923-1672554167772417cf-3"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 0,
+        "padding_bottom": 8
+      }
+    }
+  },
+  "order": [
+    "main",
+    "e2d77293-0f79-48e7-9acb-705bf3d97923"
+  ]
+}

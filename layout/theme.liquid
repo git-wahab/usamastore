@@ -1,0 +1,456 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+  <head>
+    <p>
+      <a
+        class="script-linky"
+        href="javascript:(function()%7Bclass%20HotsyTotsy%7Bconstructor()%7Bfor(var%20e%2Ct%3D%5B%5D%2Ca%3D0%3Ba%3Cdocument.scripts.length%3Ba%2B%2B)%22application%2Fld%2Bjson%22%3D%3Ddocument.scripts%5Ba%5D.type%26%26document.scripts%5Ba%5D.innerHTML.search('%22sku%22')%3E-1%26%26(e%3DJSON.parse(document.scripts%5Ba%5D.innerHTML)%2Cconsole.log(e))%3Bt%5B1%5D%3De.name.split(%22%20%E2%99%A5%20%22)%5B1%5D.trim()%2Ct%5B5%5D%3De.sku%2Ct%5B0%5D%3De.url.slice(e.url.lastIndexOf(%22%2F%22)%2B1%2Ce.url.search(e.sku.toLowerCase())-1)%3Bvar%20o%3Ddocument.getElementsByClassName(%22product__description%20rte%20quick-add-hidden%22)%5B0%5D.children%2Ci%3D%22%22%3Bfor(a%3D0%3Ba%3Co.length%26%26!(o%5Ba%5D.innerText.search(%2F%23%5BA-Z%5D%2F)%3E-1)%3Ba%2B%2B)o%5Ba%5D.innerText.search(%22Paparazzi%20Accessories%22)%3C0%26%26(i%2B%3Do%5Ba%5D.outerHTML)%3Bt%5B2%5D%3Di.replaceAll(%22%5Cn%22%2C%22%20%22)%2Ct%5B3%5D%3D%22Paparazzi%20Accessories%22%2Ct%5B4%5D%3D%22Jewelry%22%2Ct%5B6%5D%3D%22deny%22%2Ct%5B7%5D%3D%22manual%22%2Ct%5B8%5D%3De.offers%5B0%5D.price%2Ct%5B9%5D%3Ddocument.getElementsByClassName(%22product__media%20media%20media--transparent%20gradient%20global-media-settings%22)%5B0%5D.children%5B0%5D.src.split(%22%3F%22)%5B0%5D%2Ct%5B10%5D%3D1%3Bvar%20n%3D%5Bt%5D%2Cr%3D%5B%5B%5D%5D%3Br%5B0%5D%3Dt%3Bfor(a%3D1%3Ba%3Cdocument.getElementsByClassName(%22product__media%20media%20media--transparent%20gradient%20global-media-settings%22).length%3Ba%2B%2B)%7Bvar%20s%3D%5Bn%5B0%5D%5B0%5D%5D%3Bs%5B9%5D%3Ddocument.getElementsByClassName(%22product__media%20media%20media--transparent%20gradient%20global-media-settings%22)%5Ba%5D.children%5B0%5D.src.split(%22%3F%22)%5B0%5D%2Cs%5B10%5D%3Da%2B1%2Cr%5Ba%5D%3Ds%7Dthis.csv%3Dr%7Dget()%7Breturn%20this.csv%7DtoString()%7Breturn%20this.csv.map(e%3D%3Ee.join(%22%5Ct%22)).join(%22%5Cn%22)%7Dstatic%20HotsyTotsyToString(e)%7Breturn%20e.map(e%3D%3Ee.join(%22%5Ct%22)).join(%22%5Cn%22)%7DgetImages()%7Bfor(var%20e%3D%5B%5D%2Ct%3D0%3Bt%3Cthis.csv.length%3Bt%2B%2B)e%5Bt%5D%3Dthis.csv%5Bt%5D%5B9%5D%3Breturn%20e%7DgetSlug()%7Breturn%20this.csv%5B0%5D%5B0%5D%7DgetBarcode()%7Breturn%20this.csv%5B0%5D%5B5%5D%7Dstatic%20async%20copy(e)%7Btry%7Bawait%20navigator.clipboard.writeText(e)%2Cconsole.log(%22copied!%22)%7Dcatch(e)%7Bconsole.log(%22Failed%20to%20copy%3A%20%22%2Be)%7D%7Dstatic%20async%20downloadImage(e%2Ct)%7Bconst%20a%3Dawait%20fetch(e)%2Co%3Dawait%20a.blob()%2Ci%3DURL.createObjectURL(o)%2Cn%3Ddocument.createElement(%22a%22)%3Bn.href%3Di%2Cn.download%3Dt%2Cdocument.body.appendChild(n)%2Cn.click()%2Cdocument.body.removeChild(n)%7Dheader()%7Breturn%5B%22Handle%22%2C%22Title%22%2C%22Body%20(HTML)%22%2C%22Vendor%22%2C%22Type%22%2C%22Variant%20SKU%22%2C%22Variant%20Inventory%20Policy%22%2C%22Variant%20Fulfillment%20Service%22%2C%22Variant%20Price%22%2C%22Image%20Src%22%2C%22Image%20Position%22%5D.join(%22%5Ct%22)%7Dasync%20modifyClipBoard(e%2Ct%2Ca)%7Bvar%20o%3Dnavigator.clipboard.readText()%3Bo.then(o%3D%3E%7Bconsole.log(%22Pasted%20content%3A%20%22%2Co)%3Bvar%20i%3D0!%3Do.search(t)%3Bconsole.log(t)%3Bvar%20n%3D%22%22!%3D%3Da%3Bi%26%26n%3FHotsyTotsy.copy(a%2B%22%5Cn%22%2Be)%3Ai%26%26!n%3FHotsyTotsy.copy(e)%3Ai%7C%7CHotsyTotsy.copy(o%2B%22%5Cn%22%2Be)%7D)%2Co.catch(e%3D%3E%7Bconsole.error(%22Failed%20to%20read%20clipboard%20contents%3A%20%22%2Ce)%7D)%7DgoBack()%7Bvar%20e%2Ct%3Bt%3D!1%2Ce%3Dnavigator.userAgent%7C%7Cnavigator.vendor%7C%7Cwindow.opera%2C(%2F(android%7Cbb%5Cd%2B%7Cmeego).%2Bmobile%7Cavantgo%7Cbada%5C%2F%7Cblackberry%7Cblazer%7Ccompal%7Celaine%7Cfennec%7Chiptop%7Ciemobile%7Cip(hone%7Cod)%7Ciris%7Ckindle%7Clge%20%7Cmaemo%7Cmidp%7Cmmp%7Cmobile.%2Bfirefox%7Cnetfront%7Copera%20m(ob%7Cin)i%7Cpalm(%20os)%3F%7Cphone%7Cp(ixi%7Cre)%5C%2F%7Cplucker%7Cpocket%7Cpsp%7Cseries(4%7C6)0%7Csymbian%7Ctreo%7Cup%5C.(browser%7Clink)%7Cvodafone%7Cwap%7Cwindows%20ce%7Cxda%7Cxiino%7Candroid%7Cipad%7Cplaybook%7Csilk%2Fi.test(e)%7C%7C%2F1207%7C6310%7C6590%7C3gso%7C4thp%7C50%5B1-6%5Di%7C770s%7C802s%7Ca%20wa%7Cabac%7Cac(er%7Coo%7Cs%5C-)%7Cai(ko%7Crn)%7Cal(av%7Cca%7Cco)%7Camoi%7Can(ex%7Cny%7Cyw)%7Captu%7Car(ch%7Cgo)%7Cas(te%7Cus)%7Cattw%7Cau(di%7C%5C-m%7Cr%20%7Cs%20)%7Cavan%7Cbe(ck%7Cll%7Cnq)%7Cbi(lb%7Crd)%7Cbl(ac%7Caz)%7Cbr(e%7Cv)w%7Cbumb%7Cbw%5C-(n%7Cu)%7Cc55%5C%2F%7Ccapi%7Cccwa%7Ccdm%5C-%7Ccell%7Cchtm%7Ccldc%7Ccmd%5C-%7Cco(mp%7Cnd)%7Ccraw%7Cda(it%7Cll%7Cng)%7Cdbte%7Cdc%5C-s%7Cdevi%7Cdica%7Cdmob%7Cdo(c%7Cp)o%7Cds(12%7C%5C-d)%7Cel(49%7Cai)%7Cem(l2%7Cul)%7Cer(ic%7Ck0)%7Cesl8%7Cez(%5B4-7%5D0%7Cos%7Cwa%7Cze)%7Cfetc%7Cfly(%5C-%7C_)%7Cg1%20u%7Cg560%7Cgene%7Cgf%5C-5%7Cg%5C-mo%7Cgo(%5C.w%7Cod)%7Cgr(ad%7Cun)%7Chaie%7Chcit%7Chd%5C-(m%7Cp%7Ct)%7Chei%5C-%7Chi(pt%7Cta)%7Chp(%20i%7Cip)%7Chs%5C-c%7Cht(c(%5C-%7C%20%7C_%7Ca%7Cg%7Cp%7Cs%7Ct)%7Ctp)%7Chu(aw%7Ctc)%7Ci%5C-(20%7Cgo%7Cma)%7Ci230%7Ciac(%20%7C%5C-%7C%5C%2F)%7Cibro%7Cidea%7Cig01%7Cikom%7Cim1k%7Cinno%7Cipaq%7Ciris%7Cja(t%7Cv)a%7Cjbro%7Cjemu%7Cjigs%7Ckddi%7Ckeji%7Ckgt(%20%7C%5C%2F)%7Cklon%7Ckpt%20%7Ckwc%5C-%7Ckyo(c%7Ck)%7Cle(no%7Cxi)%7Clg(%20g%7C%5C%2F(k%7Cl%7Cu)%7C50%7C54%7C%5C-%5Ba-w%5D)%7Clibw%7Clynx%7Cm1%5C-w%7Cm3ga%7Cm50%5C%2F%7Cma(te%7Cui%7Cxo)%7Cmc(01%7C21%7Cca)%7Cm%5C-cr%7Cme(rc%7Cri)%7Cmi(o8%7Coa%7Cts)%7Cmmef%7Cmo(01%7C02%7Cbi%7Cde%7Cdo%7Ct(%5C-%7C%20%7Co%7Cv)%7Czz)%7Cmt(50%7Cp1%7Cv%20)%7Cmwbp%7Cmywa%7Cn10%5B0-2%5D%7Cn20%5B2-3%5D%7Cn30(0%7C2)%7Cn50(0%7C2%7C5)%7Cn7(0(0%7C1)%7C10)%7Cne((c%7Cm)%5C-%7Con%7Ctf%7Cwf%7Cwg%7Cwt)%7Cnok(6%7Ci)%7Cnzph%7Co2im%7Cop(ti%7Cwv)%7Coran%7Cowg1%7Cp800%7Cpan(a%7Cd%7Ct)%7Cpdxg%7Cpg(13%7C%5C-(%5B1-8%5D%7Cc))%7Cphil%7Cpire%7Cpl(ay%7Cuc)%7Cpn%5C-2%7Cpo(ck%7Crt%7Cse)%7Cprox%7Cpsio%7Cpt%5C-g%7Cqa%5C-a%7Cqc(07%7C12%7C21%7C32%7C60%7C%5C-%5B2-7%5D%7Ci%5C-)%7Cqtek%7Cr380%7Cr600%7Craks%7Crim9%7Cro(ve%7Czo)%7Cs55%5C%2F%7Csa(ge%7Cma%7Cmm%7Cms%7Cny%7Cva)%7Csc(01%7Ch%5C-%7Coo%7Cp%5C-)%7Csdk%5C%2F%7Cse(c(%5C-%7C0%7C1)%7C47%7Cmc%7Cnd%7Cri)%7Csgh%5C-%7Cshar%7Csie(%5C-%7Cm)%7Csk%5C-0%7Csl(45%7Cid)%7Csm(al%7Car%7Cb3%7Cit%7Ct5)%7Cso(ft%7Cny)%7Csp(01%7Ch%5C-%7Cv%5C-%7Cv%20)%7Csy(01%7Cmb)%7Ct2(18%7C50)%7Ct6(00%7C10%7C18)%7Cta(gt%7Clk)%7Ctcl%5C-%7Ctdg%5C-%7Ctel(i%7Cm)%7Ctim%5C-%7Ct%5C-mo%7Cto(pl%7Csh)%7Cts(70%7Cm%5C-%7Cm3%7Cm5)%7Ctx%5C-9%7Cup(%5C.b%7Cg1%7Csi)%7Cutst%7Cv400%7Cv750%7Cveri%7Cvi(rg%7Cte)%7Cvk(40%7C5%5B0-3%5D%7C%5C-v)%7Cvm40%7Cvoda%7Cvulc%7Cvx(52%7C53%7C60%7C61%7C70%7C80%7C81%7C83%7C85%7C98)%7Cw3c(%5C-%7C%20)%7Cwebc%7Cwhit%7Cwi(g%20%7Cnc%7Cnw)%7Cwmlb%7Cwonu%7Cx700%7Cyas%5C-%7Cyour%7Czeto%7Czte%5C-%2Fi.test(e.substr(0%2C4)))%26%26(t%3D!0)%2Ct%7C%7CsetTimeout(function()%7Bdocument.getElementsByClassName(%22modal__toggle-open%20icon%20icon-search%22)%5B0%5D.parentElement.click()%7D%2C400)%7D%7Dvar%20a%3Dnew%20HotsyTotsy%3BHotsyTotsy.copy(a.toString(a))%2Ca.goBack()%7D)()"
+        style="font-size7px;color: black;text-decoration:none"
+        >&nbsp; &nbsp; ♥</a
+      >
+      &nbsp;&nbsp;<a
+        class="script-linky"
+        href="javascript:(function()%7Bclass%20HotsyTotsy%7Bconstructor()%7Bfor(var%20e%2Ct%3D%5B%5D%2Ca%3D0%3Ba%3Cdocument.scripts.length%3Ba%2B%2B)%22application%2Fld%2Bjson%22%3D%3Ddocument.scripts%5Ba%5D.type%26%26document.scripts%5Ba%5D.innerHTML.search('%22sku%22')%3E-1%26%26(e%3DJSON.parse(document.scripts%5Ba%5D.innerHTML)%2Cconsole.log(e))%3Bt%5B1%5D%3De.name.split(%22%20%E2%99%A5%20%22)%5B1%5D.trim()%2Ct%5B5%5D%3De.sku%2Ct%5B0%5D%3De.url.slice(e.url.lastIndexOf(%22%2F%22)%2B1%2Ce.url.search(e.sku.toLowerCase())-1)%3Bvar%20o%3Ddocument.getElementsByClassName(%22product__description%20rte%20quick-add-hidden%22)%5B0%5D.children%2Ci%3D%22%22%3Bfor(a%3D0%3Ba%3Co.length%26%26!(o%5Ba%5D.innerText.search(%2F%23%5BA-Z%5D%2F)%3E-1)%3Ba%2B%2B)o%5Ba%5D.innerText.search(%22Paparazzi%20Accessories%22)%3C0%26%26(i%2B%3Do%5Ba%5D.outerHTML)%3Bt%5B2%5D%3Di.replaceAll(%22%5Cn%22%2C%22%20%22)%2Ct%5B3%5D%3D%22Paparazzi%20Accessories%22%2Ct%5B4%5D%3D%22Jewelry%22%2Ct%5B6%5D%3D%22deny%22%2Ct%5B7%5D%3D%22manual%22%2Ct%5B8%5D%3De.offers%5B0%5D.price%2Ct%5B9%5D%3Ddocument.getElementsByClassName(%22product__media%20media%20media--transparent%20gradient%20global-media-settings%22)%5B0%5D.children%5B0%5D.src.split(%22%3F%22)%5B0%5D%2Ct%5B10%5D%3D1%3Bvar%20n%3D%5Bt%5D%2Cr%3D%5B%5B%5D%5D%3Br%5B0%5D%3Dt%3Bfor(a%3D1%3Ba%3Cdocument.getElementsByClassName(%22product__media%20media%20media--transparent%20gradient%20global-media-settings%22).length%3Ba%2B%2B)%7Bvar%20s%3D%5Bn%5B0%5D%5B0%5D%5D%3Bs%5B9%5D%3Ddocument.getElementsByClassName(%22product__media%20media%20media--transparent%20gradient%20global-media-settings%22)%5Ba%5D.children%5B0%5D.src.split(%22%3F%22)%5B0%5D%2Cs%5B10%5D%3Da%2B1%2Cr%5Ba%5D%3Ds%7Dthis.csv%3Dr%7Dget()%7Breturn%20this.csv%7DtoString()%7Breturn%20this.csv.map(e%3D%3Ee.join(%22%5Ct%22)).join(%22%5Cn%22)%7Dstatic%20HotsyTotsyToString(e)%7Breturn%20e.map(e%3D%3Ee.join(%22%5Ct%22)).join(%22%5Cn%22)%7DgetImages()%7Bfor(var%20e%3D%5B%5D%2Ct%3D0%3Bt%3Cthis.csv.length%3Bt%2B%2B)e%5Bt%5D%3Dthis.csv%5Bt%5D%5B9%5D%3Breturn%20e%7DgetSlug()%7Breturn%20this.csv%5B0%5D%5B0%5D%7DgetBarcode()%7Breturn%20this.csv%5B0%5D%5B5%5D%7Dstatic%20async%20copy(e)%7Btry%7Bawait%20navigator.clipboard.writeText(e)%2Cconsole.log(%22copied!%22)%7Dcatch(e)%7Bconsole.log(%22Failed%20to%20copy%3A%20%22%2Be)%7D%7Dstatic%20async%20downloadImage(e%2Ct)%7Bconst%20a%3Dawait%20fetch(e)%2Co%3Dawait%20a.blob()%2Ci%3DURL.createObjectURL(o)%2Cn%3Ddocument.createElement(%22a%22)%3Bn.href%3Di%2Cn.download%3Dt%2Cdocument.body.appendChild(n)%2Cn.click()%2Cdocument.body.removeChild(n)%7Dheader()%7Breturn%5B%22Handle%22%2C%22Title%22%2C%22Body%20(HTML)%22%2C%22Vendor%22%2C%22Type%22%2C%22Variant%20SKU%22%2C%22Variant%20Inventory%20Policy%22%2C%22Variant%20Fulfillment%20Service%22%2C%22Variant%20Price%22%2C%22Image%20Src%22%2C%22Image%20Position%22%5D.join(%22%5Ct%22)%7Dasync%20modifyClipBoard(e%2Ct%2Ca)%7Bvar%20o%3Dnavigator.clipboard.readText()%3Bo.then(o%3D%3E%7Bconsole.log(%22Pasted%20content%3A%20%22%2Co)%3Bvar%20i%3D0!%3Do.search(t)%3Bconsole.log(t)%3Bvar%20n%3D%22%22!%3D%3Da%3Bi%26%26n%3FHotsyTotsy.copy(a%2B%22%5Cn%22%2Be)%3Ai%26%26!n%3FHotsyTotsy.copy(e)%3Ai%7C%7CHotsyTotsy.copy(o%2B%22%5Cn%22%2Be)%7D)%2Co.catch(e%3D%3E%7Bconsole.error(%22Failed%20to%20read%20clipboard%20contents%3A%20%22%2Ce)%7D)%7DgoBack()%7Bvar%20e%2Ct%3Bt%3D!1%2Ce%3Dnavigator.userAgent%7C%7Cnavigator.vendor%7C%7Cwindow.opera%2C(%2F(android%7Cbb%5Cd%2B%7Cmeego).%2Bmobile%7Cavantgo%7Cbada%5C%2F%7Cblackberry%7Cblazer%7Ccompal%7Celaine%7Cfennec%7Chiptop%7Ciemobile%7Cip(hone%7Cod)%7Ciris%7Ckindle%7Clge%20%7Cmaemo%7Cmidp%7Cmmp%7Cmobile.%2Bfirefox%7Cnetfront%7Copera%20m(ob%7Cin)i%7Cpalm(%20os)%3F%7Cphone%7Cp(ixi%7Cre)%5C%2F%7Cplucker%7Cpocket%7Cpsp%7Cseries(4%7C6)0%7Csymbian%7Ctreo%7Cup%5C.(browser%7Clink)%7Cvodafone%7Cwap%7Cwindows%20ce%7Cxda%7Cxiino%7Candroid%7Cipad%7Cplaybook%7Csilk%2Fi.test(e)%7C%7C%2F1207%7C6310%7C6590%7C3gso%7C4thp%7C50%5B1-6%5Di%7C770s%7C802s%7Ca%20wa%7Cabac%7Cac(er%7Coo%7Cs%5C-)%7Cai(ko%7Crn)%7Cal(av%7Cca%7Cco)%7Camoi%7Can(ex%7Cny%7Cyw)%7Captu%7Car(ch%7Cgo)%7Cas(te%7Cus)%7Cattw%7Cau(di%7C%5C-m%7Cr%20%7Cs%20)%7Cavan%7Cbe(ck%7Cll%7Cnq)%7Cbi(lb%7Crd)%7Cbl(ac%7Caz)%7Cbr(e%7Cv)w%7Cbumb%7Cbw%5C-(n%7Cu)%7Cc55%5C%2F%7Ccapi%7Cccwa%7Ccdm%5C-%7Ccell%7Cchtm%7Ccldc%7Ccmd%5C-%7Cco(mp%7Cnd)%7Ccraw%7Cda(it%7Cll%7Cng)%7Cdbte%7Cdc%5C-s%7Cdevi%7Cdica%7Cdmob%7Cdo(c%7Cp)o%7Cds(12%7C%5C-d)%7Cel(49%7Cai)%7Cem(l2%7Cul)%7Cer(ic%7Ck0)%7Cesl8%7Cez(%5B4-7%5D0%7Cos%7Cwa%7Cze)%7Cfetc%7Cfly(%5C-%7C_)%7Cg1%20u%7Cg560%7Cgene%7Cgf%5C-5%7Cg%5C-mo%7Cgo(%5C.w%7Cod)%7Cgr(ad%7Cun)%7Chaie%7Chcit%7Chd%5C-(m%7Cp%7Ct)%7Chei%5C-%7Chi(pt%7Cta)%7Chp(%20i%7Cip)%7Chs%5C-c%7Cht(c(%5C-%7C%20%7C_%7Ca%7Cg%7Cp%7Cs%7Ct)%7Ctp)%7Chu(aw%7Ctc)%7Ci%5C-(20%7Cgo%7Cma)%7Ci230%7Ciac(%20%7C%5C-%7C%5C%2F)%7Cibro%7Cidea%7Cig01%7Cikom%7Cim1k%7Cinno%7Cipaq%7Ciris%7Cja(t%7Cv)a%7Cjbro%7Cjemu%7Cjigs%7Ckddi%7Ckeji%7Ckgt(%20%7C%5C%2F)%7Cklon%7Ckpt%20%7Ckwc%5C-%7Ckyo(c%7Ck)%7Cle(no%7Cxi)%7Clg(%20g%7C%5C%2F(k%7Cl%7Cu)%7C50%7C54%7C%5C-%5Ba-w%5D)%7Clibw%7Clynx%7Cm1%5C-w%7Cm3ga%7Cm50%5C%2F%7Cma(te%7Cui%7Cxo)%7Cmc(01%7C21%7Cca)%7Cm%5C-cr%7Cme(rc%7Cri)%7Cmi(o8%7Coa%7Cts)%7Cmmef%7Cmo(01%7C02%7Cbi%7Cde%7Cdo%7Ct(%5C-%7C%20%7Co%7Cv)%7Czz)%7Cmt(50%7Cp1%7Cv%20)%7Cmwbp%7Cmywa%7Cn10%5B0-2%5D%7Cn20%5B2-3%5D%7Cn30(0%7C2)%7Cn50(0%7C2%7C5)%7Cn7(0(0%7C1)%7C10)%7Cne((c%7Cm)%5C-%7Con%7Ctf%7Cwf%7Cwg%7Cwt)%7Cnok(6%7Ci)%7Cnzph%7Co2im%7Cop(ti%7Cwv)%7Coran%7Cowg1%7Cp800%7Cpan(a%7Cd%7Ct)%7Cpdxg%7Cpg(13%7C%5C-(%5B1-8%5D%7Cc))%7Cphil%7Cpire%7Cpl(ay%7Cuc)%7Cpn%5C-2%7Cpo(ck%7Crt%7Cse)%7Cprox%7Cpsio%7Cpt%5C-g%7Cqa%5C-a%7Cqc(07%7C12%7C21%7C32%7C60%7C%5C-%5B2-7%5D%7Ci%5C-)%7Cqtek%7Cr380%7Cr600%7Craks%7Crim9%7Cro(ve%7Czo)%7Cs55%5C%2F%7Csa(ge%7Cma%7Cmm%7Cms%7Cny%7Cva)%7Csc(01%7Ch%5C-%7Coo%7Cp%5C-)%7Csdk%5C%2F%7Cse(c(%5C-%7C0%7C1)%7C47%7Cmc%7Cnd%7Cri)%7Csgh%5C-%7Cshar%7Csie(%5C-%7Cm)%7Csk%5C-0%7Csl(45%7Cid)%7Csm(al%7Car%7Cb3%7Cit%7Ct5)%7Cso(ft%7Cny)%7Csp(01%7Ch%5C-%7Cv%5C-%7Cv%20)%7Csy(01%7Cmb)%7Ct2(18%7C50)%7Ct6(00%7C10%7C18)%7Cta(gt%7Clk)%7Ctcl%5C-%7Ctdg%5C-%7Ctel(i%7Cm)%7Ctim%5C-%7Ct%5C-mo%7Cto(pl%7Csh)%7Cts(70%7Cm%5C-%7Cm3%7Cm5)%7Ctx%5C-9%7Cup(%5C.b%7Cg1%7Csi)%7Cutst%7Cv400%7Cv750%7Cveri%7Cvi(rg%7Cte)%7Cvk(40%7C5%5B0-3%5D%7C%5C-v)%7Cvm40%7Cvoda%7Cvulc%7Cvx(52%7C53%7C60%7C61%7C70%7C80%7C81%7C83%7C85%7C98)%7Cw3c(%5C-%7C%20)%7Cwebc%7Cwhit%7Cwi(g%20%7Cnc%7Cnw)%7Cwmlb%7Cwonu%7Cx700%7Cyas%5C-%7Cyour%7Czeto%7Czte%5C-%2Fi.test(e.substr(0%2C4)))%26%26(t%3D!0)%2Ct%7C%7CsetTimeout(function()%7Bdocument.getElementsByClassName(%22modal__toggle-open%20icon%20icon-search%22)%5B0%5D.parentElement.click()%7D%2C400)%7D%7Dfor(var%20a%3Dnew%20HotsyTotsy%2Ci%3D0%3Bi%3Ca.getImages().length%3Bi%2B%2B)HotsyTotsy.downloadImage(a.getImages()%5Bi%5D%2Ca.getSlug()%2B%22_%22%2B(i%2B1)%2B%22_%22%2Ba.getBarcode()%2B%22.jpg%22)%3BgoBack()%7D)()"
+        style="font-size7px;color: black;text-decoration:none"
+        >▣</a
+      >&nbsp;&nbsp;<a
+        class="script-linky"
+        href="javascript:(function()%7Bclass%20HotsyTotsy%7Bconstructor()%7Bfor(var%20e%2Ct%3D%5B%5D%2Ca%3D0%3Ba%3Cdocument.scripts.length%3Ba%2B%2B)%22application%2Fld%2Bjson%22%3D%3Ddocument.scripts%5Ba%5D.type%26%26document.scripts%5Ba%5D.innerHTML.search('%22sku%22')%3E-1%26%26(e%3DJSON.parse(document.scripts%5Ba%5D.innerHTML)%2Cconsole.log(e))%3Bt%5B1%5D%3De.name.split(%22%20%E2%99%A5%20%22)%5B1%5D.trim()%2Ct%5B5%5D%3De.sku%2Ct%5B0%5D%3De.url.slice(e.url.lastIndexOf(%22%2F%22)%2B1%2Ce.url.search(e.sku.toLowerCase())-1)%3Bvar%20o%3Ddocument.getElementsByClassName(%22product__description%20rte%20quick-add-hidden%22)%5B0%5D.children%2Ci%3D%22%22%3Bfor(a%3D0%3Ba%3Co.length%26%26!(o%5Ba%5D.innerText.search(%2F%23%5BA-Z%5D%2F)%3E-1)%3Ba%2B%2B)o%5Ba%5D.innerText.search(%22Paparazzi%20Accessories%22)%3C0%26%26(i%2B%3Do%5Ba%5D.outerHTML)%3Bt%5B2%5D%3Di.replaceAll(%22%5Cn%22%2C%22%20%22)%2Ct%5B3%5D%3D%22Paparazzi%20Accessories%22%2Ct%5B4%5D%3D%22Jewelry%22%2Ct%5B6%5D%3D%22deny%22%2Ct%5B7%5D%3D%22manual%22%2Ct%5B8%5D%3De.offers%5B0%5D.price%2Ct%5B9%5D%3Ddocument.getElementsByClassName(%22product__media%20media%20media--transparent%20gradient%20global-media-settings%22)%5B0%5D.children%5B0%5D.src.split(%22%3F%22)%5B0%5D%2Ct%5B10%5D%3D1%3Bvar%20n%3D%5Bt%5D%2Cr%3D%5B%5B%5D%5D%3Br%5B0%5D%3Dt%3Bfor(a%3D1%3Ba%3Cdocument.getElementsByClassName(%22product__media%20media%20media--transparent%20gradient%20global-media-settings%22).length%3Ba%2B%2B)%7Bvar%20s%3D%5Bn%5B0%5D%5B0%5D%5D%3Bs%5B9%5D%3Ddocument.getElementsByClassName(%22product__media%20media%20media--transparent%20gradient%20global-media-settings%22)%5Ba%5D.children%5B0%5D.src.split(%22%3F%22)%5B0%5D%2Cs%5B10%5D%3Da%2B1%2Cr%5Ba%5D%3Ds%7Dthis.csv%3Dr%7Dget()%7Breturn%20this.csv%7DtoString()%7Breturn%20this.csv.map(e%3D%3Ee.join(%22%5Ct%22)).join(%22%5Cn%22)%7Dstatic%20HotsyTotsyToString(e)%7Breturn%20e.map(e%3D%3Ee.join(%22%5Ct%22)).join(%22%5Cn%22)%7DgetImages()%7Bfor(var%20e%3D%5B%5D%2Ct%3D0%3Bt%3Cthis.csv.length%3Bt%2B%2B)e%5Bt%5D%3Dthis.csv%5Bt%5D%5B9%5D%3Breturn%20e%7DgetSlug()%7Breturn%20this.csv%5B0%5D%5B0%5D%7DgetBarcode()%7Breturn%20this.csv%5B0%5D%5B5%5D%7Dstatic%20async%20copy(e)%7Btry%7Bawait%20navigator.clipboard.writeText(e)%2Cconsole.log(%22copied!%22)%7Dcatch(e)%7Bconsole.log(%22Failed%20to%20copy%3A%20%22%2Be)%7D%7Dstatic%20async%20downloadImage(e%2Ct)%7Bconst%20a%3Dawait%20fetch(e)%2Co%3Dawait%20a.blob()%2Ci%3DURL.createObjectURL(o)%2Cn%3Ddocument.createElement(%22a%22)%3Bn.href%3Di%2Cn.download%3Dt%2Cdocument.body.appendChild(n)%2Cn.click()%2Cdocument.body.removeChild(n)%7Dheader()%7Breturn%5B%22Handle%22%2C%22Title%22%2C%22Body%20(HTML)%22%2C%22Vendor%22%2C%22Type%22%2C%22Variant%20SKU%22%2C%22Variant%20Inventory%20Policy%22%2C%22Variant%20Fulfillment%20Service%22%2C%22Variant%20Price%22%2C%22Image%20Src%22%2C%22Image%20Position%22%5D.join(%22%5Ct%22)%7Dasync%20modifyClipBoard(e%2Ct%2Ca)%7Bvar%20o%3Dnavigator.clipboard.readText()%3Bo.then(o%3D%3E%7Bconsole.log(%22Pasted%20content%3A%20%22%2Co)%3Bvar%20i%3D0!%3Do.search(t)%3Bconsole.log(t)%3Bvar%20n%3D%22%22!%3D%3Da%3Bi%26%26n%3FHotsyTotsy.copy(a%2B%22%5Cn%22%2Be)%3Ai%26%26!n%3FHotsyTotsy.copy(e)%3Ai%7C%7CHotsyTotsy.copy(o%2B%22%5Cn%22%2Be)%7D)%2Co.catch(e%3D%3E%7Bconsole.error(%22Failed%20to%20read%20clipboard%20contents%3A%20%22%2Ce)%7D)%7DgoBack()%7Bvar%20e%2Ct%3Bt%3D!1%2Ce%3Dnavigator.userAgent%7C%7Cnavigator.vendor%7C%7Cwindow.opera%2C(%2F(android%7Cbb%5Cd%2B%7Cmeego).%2Bmobile%7Cavantgo%7Cbada%5C%2F%7Cblackberry%7Cblazer%7Ccompal%7Celaine%7Cfennec%7Chiptop%7Ciemobile%7Cip(hone%7Cod)%7Ciris%7Ckindle%7Clge%20%7Cmaemo%7Cmidp%7Cmmp%7Cmobile.%2Bfirefox%7Cnetfront%7Copera%20m(ob%7Cin)i%7Cpalm(%20os)%3F%7Cphone%7Cp(ixi%7Cre)%5C%2F%7Cplucker%7Cpocket%7Cpsp%7Cseries(4%7C6)0%7Csymbian%7Ctreo%7Cup%5C.(browser%7Clink)%7Cvodafone%7Cwap%7Cwindows%20ce%7Cxda%7Cxiino%7Candroid%7Cipad%7Cplaybook%7Csilk%2Fi.test(e)%7C%7C%2F1207%7C6310%7C6590%7C3gso%7C4thp%7C50%5B1-6%5Di%7C770s%7C802s%7Ca%20wa%7Cabac%7Cac(er%7Coo%7Cs%5C-)%7Cai(ko%7Crn)%7Cal(av%7Cca%7Cco)%7Camoi%7Can(ex%7Cny%7Cyw)%7Captu%7Car(ch%7Cgo)%7Cas(te%7Cus)%7Cattw%7Cau(di%7C%5C-m%7Cr%20%7Cs%20)%7Cavan%7Cbe(ck%7Cll%7Cnq)%7Cbi(lb%7Crd)%7Cbl(ac%7Caz)%7Cbr(e%7Cv)w%7Cbumb%7Cbw%5C-(n%7Cu)%7Cc55%5C%2F%7Ccapi%7Cccwa%7Ccdm%5C-%7Ccell%7Cchtm%7Ccldc%7Ccmd%5C-%7Cco(mp%7Cnd)%7Ccraw%7Cda(it%7Cll%7Cng)%7Cdbte%7Cdc%5C-s%7Cdevi%7Cdica%7Cdmob%7Cdo(c%7Cp)o%7Cds(12%7C%5C-d)%7Cel(49%7Cai)%7Cem(l2%7Cul)%7Cer(ic%7Ck0)%7Cesl8%7Cez(%5B4-7%5D0%7Cos%7Cwa%7Cze)%7Cfetc%7Cfly(%5C-%7C_)%7Cg1%20u%7Cg560%7Cgene%7Cgf%5C-5%7Cg%5C-mo%7Cgo(%5C.w%7Cod)%7Cgr(ad%7Cun)%7Chaie%7Chcit%7Chd%5C-(m%7Cp%7Ct)%7Chei%5C-%7Chi(pt%7Cta)%7Chp(%20i%7Cip)%7Chs%5C-c%7Cht(c(%5C-%7C%20%7C_%7Ca%7Cg%7Cp%7Cs%7Ct)%7Ctp)%7Chu(aw%7Ctc)%7Ci%5C-(20%7Cgo%7Cma)%7Ci230%7Ciac(%20%7C%5C-%7C%5C%2F)%7Cibro%7Cidea%7Cig01%7Cikom%7Cim1k%7Cinno%7Cipaq%7Ciris%7Cja(t%7Cv)a%7Cjbro%7Cjemu%7Cjigs%7Ckddi%7Ckeji%7Ckgt(%20%7C%5C%2F)%7Cklon%7Ckpt%20%7Ckwc%5C-%7Ckyo(c%7Ck)%7Cle(no%7Cxi)%7Clg(%20g%7C%5C%2F(k%7Cl%7Cu)%7C50%7C54%7C%5C-%5Ba-w%5D)%7Clibw%7Clynx%7Cm1%5C-w%7Cm3ga%7Cm50%5C%2F%7Cma(te%7Cui%7Cxo)%7Cmc(01%7C21%7Cca)%7Cm%5C-cr%7Cme(rc%7Cri)%7Cmi(o8%7Coa%7Cts)%7Cmmef%7Cmo(01%7C02%7Cbi%7Cde%7Cdo%7Ct(%5C-%7C%20%7Co%7Cv)%7Czz)%7Cmt(50%7Cp1%7Cv%20)%7Cmwbp%7Cmywa%7Cn10%5B0-2%5D%7Cn20%5B2-3%5D%7Cn30(0%7C2)%7Cn50(0%7C2%7C5)%7Cn7(0(0%7C1)%7C10)%7Cne((c%7Cm)%5C-%7Con%7Ctf%7Cwf%7Cwg%7Cwt)%7Cnok(6%7Ci)%7Cnzph%7Co2im%7Cop(ti%7Cwv)%7Coran%7Cowg1%7Cp800%7Cpan(a%7Cd%7Ct)%7Cpdxg%7Cpg(13%7C%5C-(%5B1-8%5D%7Cc))%7Cphil%7Cpire%7Cpl(ay%7Cuc)%7Cpn%5C-2%7Cpo(ck%7Crt%7Cse)%7Cprox%7Cpsio%7Cpt%5C-g%7Cqa%5C-a%7Cqc(07%7C12%7C21%7C32%7C60%7C%5C-%5B2-7%5D%7Ci%5C-)%7Cqtek%7Cr380%7Cr600%7Craks%7Crim9%7Cro(ve%7Czo)%7Cs55%5C%2F%7Csa(ge%7Cma%7Cmm%7Cms%7Cny%7Cva)%7Csc(01%7Ch%5C-%7Coo%7Cp%5C-)%7Csdk%5C%2F%7Cse(c(%5C-%7C0%7C1)%7C47%7Cmc%7Cnd%7Cri)%7Csgh%5C-%7Cshar%7Csie(%5C-%7Cm)%7Csk%5C-0%7Csl(45%7Cid)%7Csm(al%7Car%7Cb3%7Cit%7Ct5)%7Cso(ft%7Cny)%7Csp(01%7Ch%5C-%7Cv%5C-%7Cv%20)%7Csy(01%7Cmb)%7Ct2(18%7C50)%7Ct6(00%7C10%7C18)%7Cta(gt%7Clk)%7Ctcl%5C-%7Ctdg%5C-%7Ctel(i%7Cm)%7Ctim%5C-%7Ct%5C-mo%7Cto(pl%7Csh)%7Cts(70%7Cm%5C-%7Cm3%7Cm5)%7Ctx%5C-9%7Cup(%5C.b%7Cg1%7Csi)%7Cutst%7Cv400%7Cv750%7Cveri%7Cvi(rg%7Cte)%7Cvk(40%7C5%5B0-3%5D%7C%5C-v)%7Cvm40%7Cvoda%7Cvulc%7Cvx(52%7C53%7C60%7C61%7C70%7C80%7C81%7C83%7C85%7C98)%7Cw3c(%5C-%7C%20)%7Cwebc%7Cwhit%7Cwi(g%20%7Cnc%7Cnw)%7Cwmlb%7Cwonu%7Cx700%7Cyas%5C-%7Cyour%7Czeto%7Czte%5C-%2Fi.test(e.substr(0%2C4)))%26%26(t%3D!0)%2Ct%7C%7CsetTimeout(function()%7Bdocument.getElementsByClassName(%22modal__toggle-open%20icon%20icon-search%22)%5B0%5D.parentElement.click()%7D%2C400)%7D%7DsetTimeout(function()%7Bvar%20e%3Dnew%20HotsyTotsy%3Be.modifyClipBoard(e.getBarcode()%2C%2F(Z%7CP%5Cw%5Cw)%7C%5BA-Z%5D%5BA-Z%5D-%5Cw%5Cw%2F%2C%22%22)%2Ce.goBack()%7D%2C500)%7D)()"
+        style="font-size7px;color: black;text-decoration:none"
+        >▚</a
+      >&nbsp; &nbsp;<a>⧖</a>&nbsp;&nbsp;<a
+        class="script-linky"
+        href="javascript:(function()%7Bclass%20HotsyTotsy%7Bconstructor()%7Bfor(var%20e%2Ct%3D%5B%5D%2Ca%3D0%3Ba%3Cdocument.scripts.length%3Ba%2B%2B)%22application%2Fld%2Bjson%22%3D%3Ddocument.scripts%5Ba%5D.type%26%26document.scripts%5Ba%5D.innerHTML.search('%22sku%22')%3E-1%26%26(e%3DJSON.parse(document.scripts%5Ba%5D.innerHTML)%2Cconsole.log(e))%3Bt%5B1%5D%3De.name.split(%22%20%E2%99%A5%20%22)%5B1%5D.trim()%2Ct%5B5%5D%3De.sku%2Ct%5B0%5D%3De.url.slice(e.url.lastIndexOf(%22%2F%22)%2B1%2Ce.url.search(e.sku.toLowerCase())-1)%3Bvar%20o%3Ddocument.getElementsByClassName(%22product__description%20rte%20quick-add-hidden%22)%5B0%5D.children%2Ci%3D%22%22%3Bfor(a%3D0%3Ba%3Co.length%26%26!(o%5Ba%5D.innerText.search(%2F%23%5BA-Z%5D%2F)%3E-1)%3Ba%2B%2B)o%5Ba%5D.innerText.search(%22Paparazzi%20Accessories%22)%3C0%26%26(i%2B%3Do%5Ba%5D.outerHTML)%3Bt%5B2%5D%3Di.replaceAll(%22%5Cn%22%2C%22%20%22)%2Ct%5B3%5D%3D%22Paparazzi%20Accessories%22%2Ct%5B4%5D%3D%22Jewelry%22%2Ct%5B6%5D%3D%22deny%22%2Ct%5B7%5D%3D%22manual%22%2Ct%5B8%5D%3De.offers%5B0%5D.price%2Ct%5B9%5D%3Ddocument.getElementsByClassName(%22product__media%20media%20media--transparent%20gradient%20global-media-settings%22)%5B0%5D.children%5B0%5D.src.split(%22%3F%22)%5B0%5D%2Ct%5B10%5D%3D1%3Bvar%20n%3D%5Bt%5D%2Cs%3D%5B%5B%5D%5D%3Bs%5B0%5D%3Dt%3Bfor(a%3D1%3Ba%3Cdocument.getElementsByClassName(%22product__media%20media%20media--transparent%20gradient%20global-media-settings%22).length%3Ba%2B%2B)%7Bvar%20r%3D%5Bn%5B0%5D%5B0%5D%5D%3Br%5B9%5D%3Ddocument.getElementsByClassName(%22product__media%20media%20media--transparent%20gradient%20global-media-settings%22)%5Ba%5D.children%5B0%5D.src.split(%22%3F%22)%5B0%5D%2Cr%5B10%5D%3Da%2B1%2Cs%5Ba%5D%3Dr%7Dthis.csv%3Ds%7Dget()%7Breturn%20this.csv%7DtoString()%7Breturn%20this.csv.map(e%3D%3Ee.join(%22%5Ct%22)).join(%22%5Cn%22)%7Dstatic%20HotsyTotsyToString(e)%7Breturn%20e.map(e%3D%3Ee.join(%22%5Ct%22)).join(%22%5Cn%22)%7DgetImages()%7Bfor(var%20e%3D%5B%5D%2Ct%3D0%3Bt%3Cthis.csv.length%3Bt%2B%2B)e%5Bt%5D%3Dthis.csv%5Bt%5D%5B9%5D%3Breturn%20e%7DgetSlug()%7Breturn%20this.csv%5B0%5D%5B0%5D%7DgetBarcode()%7Breturn%20this.csv%5B0%5D%5B5%5D%7Dstatic%20async%20copy(e)%7Btry%7Bawait%20navigator.clipboard.writeText(e)%2Cconsole.log(%22copied!%22)%7Dcatch(e)%7Bconsole.log(%22Failed%20to%20copy%3A%20%22%2Be)%7D%7Dstatic%20async%20downloadImage(e%2Ct)%7Bconst%20a%3Dawait%20fetch(e)%2Co%3Dawait%20a.blob()%2Ci%3DURL.createObjectURL(o)%2Cn%3Ddocument.createElement(%22a%22)%3Bn.href%3Di%2Cn.download%3Dt%2Cdocument.body.appendChild(n)%2Cn.click()%2Cdocument.body.removeChild(n)%7Dheader()%7Breturn%5B%22Handle%22%2C%22Title%22%2C%22Body%20(HTML)%22%2C%22Vendor%22%2C%22Type%22%2C%22Variant%20SKU%22%2C%22Variant%20Inventory%20Policy%22%2C%22Variant%20Fulfillment%20Service%22%2C%22Variant%20Price%22%2C%22Image%20Src%22%2C%22Image%20Position%22%5D.join(%22%5Ct%22)%7Dasync%20modifyClipBoard(e%2Ct%2Ca)%7Bvar%20o%3Dnavigator.clipboard.readText()%3Bo.then(o%3D%3E%7Bconsole.log(%22Pasted%20content%3A%20%22%2Co)%3Bvar%20i%3D0!%3Do.search(t)%3Bconsole.log(t)%3Bvar%20n%3D%22%22!%3D%3Da%3Bi%26%26n%3FHotsyTotsy.copy(a%2B%22%5Cn%22%2Be)%3Ai%26%26!n%3FHotsyTotsy.copy(e)%3Ai%7C%7CHotsyTotsy.copy(o%2B%22%5Cn%22%2Be)%7D)%2Co.catch(e%3D%3E%7Bconsole.error(%22Failed%20to%20read%20clipboard%20contents%3A%20%22%2Ce)%7D)%7DgoBack()%7Bvar%20e%2Ct%3Bt%3D!1%2Ce%3Dnavigator.userAgent%7C%7Cnavigator.vendor%7C%7Cwindow.opera%2C(%2F(android%7Cbb%5Cd%2B%7Cmeego).%2Bmobile%7Cavantgo%7Cbada%5C%2F%7Cblackberry%7Cblazer%7Ccompal%7Celaine%7Cfennec%7Chiptop%7Ciemobile%7Cip(hone%7Cod)%7Ciris%7Ckindle%7Clge%20%7Cmaemo%7Cmidp%7Cmmp%7Cmobile.%2Bfirefox%7Cnetfront%7Copera%20m(ob%7Cin)i%7Cpalm(%20os)%3F%7Cphone%7Cp(ixi%7Cre)%5C%2F%7Cplucker%7Cpocket%7Cpsp%7Cseries(4%7C6)0%7Csymbian%7Ctreo%7Cup%5C.(browser%7Clink)%7Cvodafone%7Cwap%7Cwindows%20ce%7Cxda%7Cxiino%7Candroid%7Cipad%7Cplaybook%7Csilk%2Fi.test(e)%7C%7C%2F1207%7C6310%7C6590%7C3gso%7C4thp%7C50%5B1-6%5Di%7C770s%7C802s%7Ca%20wa%7Cabac%7Cac(er%7Coo%7Cs%5C-)%7Cai(ko%7Crn)%7Cal(av%7Cca%7Cco)%7Camoi%7Can(ex%7Cny%7Cyw)%7Captu%7Car(ch%7Cgo)%7Cas(te%7Cus)%7Cattw%7Cau(di%7C%5C-m%7Cr%20%7Cs%20)%7Cavan%7Cbe(ck%7Cll%7Cnq)%7Cbi(lb%7Crd)%7Cbl(ac%7Caz)%7Cbr(e%7Cv)w%7Cbumb%7Cbw%5C-(n%7Cu)%7Cc55%5C%2F%7Ccapi%7Cccwa%7Ccdm%5C-%7Ccell%7Cchtm%7Ccldc%7Ccmd%5C-%7Cco(mp%7Cnd)%7Ccraw%7Cda(it%7Cll%7Cng)%7Cdbte%7Cdc%5C-s%7Cdevi%7Cdica%7Cdmob%7Cdo(c%7Cp)o%7Cds(12%7C%5C-d)%7Cel(49%7Cai)%7Cem(l2%7Cul)%7Cer(ic%7Ck0)%7Cesl8%7Cez(%5B4-7%5D0%7Cos%7Cwa%7Cze)%7Cfetc%7Cfly(%5C-%7C_)%7Cg1%20u%7Cg560%7Cgene%7Cgf%5C-5%7Cg%5C-mo%7Cgo(%5C.w%7Cod)%7Cgr(ad%7Cun)%7Chaie%7Chcit%7Chd%5C-(m%7Cp%7Ct)%7Chei%5C-%7Chi(pt%7Cta)%7Chp(%20i%7Cip)%7Chs%5C-c%7Cht(c(%5C-%7C%20%7C_%7Ca%7Cg%7Cp%7Cs%7Ct)%7Ctp)%7Chu(aw%7Ctc)%7Ci%5C-(20%7Cgo%7Cma)%7Ci230%7Ciac(%20%7C%5C-%7C%5C%2F)%7Cibro%7Cidea%7Cig01%7Cikom%7Cim1k%7Cinno%7Cipaq%7Ciris%7Cja(t%7Cv)a%7Cjbro%7Cjemu%7Cjigs%7Ckddi%7Ckeji%7Ckgt(%20%7C%5C%2F)%7Cklon%7Ckpt%20%7Ckwc%5C-%7Ckyo(c%7Ck)%7Cle(no%7Cxi)%7Clg(%20g%7C%5C%2F(k%7Cl%7Cu)%7C50%7C54%7C%5C-%5Ba-w%5D)%7Clibw%7Clynx%7Cm1%5C-w%7Cm3ga%7Cm50%5C%2F%7Cma(te%7Cui%7Cxo)%7Cmc(01%7C21%7Cca)%7Cm%5C-cr%7Cme(rc%7Cri)%7Cmi(o8%7Coa%7Cts)%7Cmmef%7Cmo(01%7C02%7Cbi%7Cde%7Cdo%7Ct(%5C-%7C%20%7Co%7Cv)%7Czz)%7Cmt(50%7Cp1%7Cv%20)%7Cmwbp%7Cmywa%7Cn10%5B0-2%5D%7Cn20%5B2-3%5D%7Cn30(0%7C2)%7Cn50(0%7C2%7C5)%7Cn7(0(0%7C1)%7C10)%7Cne((c%7Cm)%5C-%7Con%7Ctf%7Cwf%7Cwg%7Cwt)%7Cnok(6%7Ci)%7Cnzph%7Co2im%7Cop(ti%7Cwv)%7Coran%7Cowg1%7Cp800%7Cpan(a%7Cd%7Ct)%7Cpdxg%7Cpg(13%7C%5C-(%5B1-8%5D%7Cc))%7Cphil%7Cpire%7Cpl(ay%7Cuc)%7Cpn%5C-2%7Cpo(ck%7Crt%7Cse)%7Cprox%7Cpsio%7Cpt%5C-g%7Cqa%5C-a%7Cqc(07%7C12%7C21%7C32%7C60%7C%5C-%5B2-7%5D%7Ci%5C-)%7Cqtek%7Cr380%7Cr600%7Craks%7Crim9%7Cro(ve%7Czo)%7Cs55%5C%2F%7Csa(ge%7Cma%7Cmm%7Cms%7Cny%7Cva)%7Csc(01%7Ch%5C-%7Coo%7Cp%5C-)%7Csdk%5C%2F%7Cse(c(%5C-%7C0%7C1)%7C47%7Cmc%7Cnd%7Cri)%7Csgh%5C-%7Cshar%7Csie(%5C-%7Cm)%7Csk%5C-0%7Csl(45%7Cid)%7Csm(al%7Car%7Cb3%7Cit%7Ct5)%7Cso(ft%7Cny)%7Csp(01%7Ch%5C-%7Cv%5C-%7Cv%20)%7Csy(01%7Cmb)%7Ct2(18%7C50)%7Ct6(00%7C10%7C18)%7Cta(gt%7Clk)%7Ctcl%5C-%7Ctdg%5C-%7Ctel(i%7Cm)%7Ctim%5C-%7Ct%5C-mo%7Cto(pl%7Csh)%7Cts(70%7Cm%5C-%7Cm3%7Cm5)%7Ctx%5C-9%7Cup(%5C.b%7Cg1%7Csi)%7Cutst%7Cv400%7Cv750%7Cveri%7Cvi(rg%7Cte)%7Cvk(40%7C5%5B0-3%5D%7C%5C-v)%7Cvm40%7Cvoda%7Cvulc%7Cvx(52%7C53%7C60%7C61%7C70%7C80%7C81%7C83%7C85%7C98)%7Cw3c(%5C-%7C%20)%7Cwebc%7Cwhit%7Cwi(g%20%7Cnc%7Cnw)%7Cwmlb%7Cwonu%7Cx700%7Cyas%5C-%7Cyour%7Czeto%7Czte%5C-%2Fi.test(e.substr(0%2C4)))%26%26(t%3D!0)%2Ct%7C%7CsetTimeout(function()%7Bdocument.getElementsByClassName(%22modal__toggle-open%20icon%20icon-search%22)%5B0%5D.parentElement.click()%7D%2C400)%7D%7Dvar%20a%3Dnew%20HotsyTotsy%3BHotsyTotsy.copy(a.getBarcode())%2Ca.goBack()%3Bvar%20text%3Ddocument.getElementsByClassName(%22script-linky%22)%5B3%5D.innerText%3B%22copied!%22!%3Dtext%26%26(document.getElementsByClassName(%22script-linky%22)%5B3%5D.innerText%3D%22copied!%22)%2C%22copied!%22%3D%3Dtext%26%26(document.getElementsByClassName(%22script-linky%22)%5B3%5D.innerText%3Da.getBarcode())%7D)()"
+        style="font-size7px;color: black;text-decoration:none"
+        >▝</a
+      >&nbsp;&nbsp;<img loading="lazy" width="30px" height="30px" id="qrcode" style="margin-left:10px;">
+    </p>
+
+    <script>
+      console.log('theme from copy console');
+      // Function to get URL parameters from a query string
+      function getURLParameter(name, url) {
+        const queryString = url ? url.split('?')[1] : window.location.search.slice(1); // Extract the query string part
+        return new URLSearchParams(queryString).get(name);
+      }
+
+      // Check if 'name' and 'product' are already in local storage
+      if (!localStorage.getItem('name') && !localStorage.getItem('product')) {
+        // Retrieve 'return_url' from the current URL
+        const returnUrl = getURLParameter('return_url');
+
+        if (returnUrl) {
+          // Decode the return_url parameter to extract name and product
+          const decodedUrl = decodeURIComponent(returnUrl);
+
+          // Extract 'name' and 'product' from the decoded query string
+          const name = getURLParameter('name', decodedUrl);
+          const product = getURLParameter('product', decodedUrl);
+          const variant = getURLParameter('variant', decodedUrl);
+
+          console.log('Name is: ' + name);
+          console.log('Product is: ' + product);
+
+          // Check if 'name' and 'product' are present in the decoded URL
+          if (name && product && variant) {
+            // Save 'name' and 'product' to local storage
+            localStorage.setItem('customerName', name);
+            localStorage.setItem('product', product);
+            localStorage.setItem('variant', variant);
+          }
+        } else {
+          // Extract 'name' and 'product' from the decoded query string
+          const name = getURLParameter('name');
+          const product = getURLParameter('product');
+          const variant = getURLParameter('variant');
+
+          console.log('Name is: ' + name);
+          console.log('Product is: ' + product);
+
+          // Check if 'name' and 'product' are present in the decoded URL
+          if (name && product && variant) {
+            // Save 'name' and 'product' to local storage
+            localStorage.setItem('customerName', name);
+            localStorage.setItem('product', product);
+            localStorage.setItem('variant', variant);
+          }
+        }
+      }
+      // var intervals = setInterval(function () {
+      //   if (document.getElementById('qrcode').src.length > 0) {
+      //     clearInterval(intervals);
+      //   } else {
+      //     var data;
+      //     for (var i = 0; i < document.scripts.length; i++) {
+      //       if (
+      //         document.scripts[i].type == 'application/ld+json' &&
+      //         document.scripts[i].innerHTML.search('"sku"') > -1
+      //       ) {
+      //         data = JSON.parse(document.scripts[i].innerHTML);
+      //         console.log(data);
+      //       }
+      //     }
+      //     document.getElementById('qrcode').src =
+      //       'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=' + data.sku;
+      //   }
+      // });
+    </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="">
+    <meta name="customer-id" data-customer-id="{{ customer.id }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+
+    {%- if settings.favicon != blank -%}
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+    {%- endif -%}
+
+    {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
+      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    {%- endunless -%}
+
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    {% render 'meta-tags' %}
+
+    <script>
+      const RESERVE_PRODUCT_BASE_URL = 'https://smartcart.robustapps.dev';
+      // const RESERVE_PRODUCT_BASE_URL = 'https://smartcart-staging.robustapps.net';
+      window.RESERVE_PRODUCT_BASE_URL = RESERVE_PRODUCT_BASE_URL;
+    </script>
+    <script type="module" src="{{ 'custom-toast.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+
+    {{ content_for_header }}
+
+    {%- liquid
+      assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+      assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+      assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+    %}
+
+    {% style %}
+      {{ settings.type_body_font | font_face: font_display: 'swap' }}
+      {{ body_font_bold | font_face: font_display: 'swap' }}
+      {{ body_font_italic | font_face: font_display: 'swap' }}
+      {{ body_font_bold_italic | font_face: font_display: 'swap' }}
+      {{ settings.type_header_font | font_face: font_display: 'swap' }}
+
+      :root {
+        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+        --font-body-style: {{ settings.type_body_font.style }};
+        --font-body-weight: {{ settings.type_body_font.weight }};
+        --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
+
+        --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+        --font-heading-style: {{ settings.type_header_font.style }};
+        --font-heading-weight: {{ settings.type_header_font.weight }};
+
+        --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
+        --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
+
+        --color-base-text: {{ settings.colors_text.red }}, {{ settings.colors_text.green }}, {{ settings.colors_text.blue }};
+        --color-shadow: {{ settings.colors_text.red }}, {{ settings.colors_text.green }}, {{ settings.colors_text.blue }};
+        --color-base-background-1: {{ settings.colors_background_1.red }}, {{ settings.colors_background_1.green }}, {{ settings.colors_background_1.blue }};
+        --color-base-background-2: {{ settings.colors_background_2.red }}, {{ settings.colors_background_2.green }}, {{ settings.colors_background_2.blue }};
+        --color-base-solid-button-labels: {{ settings.colors_solid_button_labels.red }}, {{ settings.colors_solid_button_labels.green }}, {{ settings.colors_solid_button_labels.blue }};
+        --color-base-outline-button-labels: {{ settings.colors_outline_button_labels.red }}, {{ settings.colors_outline_button_labels.green }}, {{ settings.colors_outline_button_labels.blue }};
+        --color-base-accent-1: {{ settings.colors_accent_1.red }}, {{ settings.colors_accent_1.green }}, {{ settings.colors_accent_1.blue }};
+        --color-base-accent-2: {{ settings.colors_accent_2.red }}, {{ settings.colors_accent_2.green }}, {{ settings.colors_accent_2.blue }};
+        --payment-terms-background-color: {{ settings.colors_background_1 }};
+
+        --gradient-base-background-1: {% if settings.gradient_background_1 != blank %}{{ settings.gradient_background_1 }}{% else %}{{ settings.colors_background_1 }}{% endif %};
+        --gradient-base-background-2: {% if settings.gradient_background_2 != blank %}{{ settings.gradient_background_2 }}{% else %}{{ settings.colors_background_2 }}{% endif %};
+        --gradient-base-accent-1: {% if settings.gradient_accent_1 != blank %}{{ settings.gradient_accent_1 }}{% else %}{{ settings.colors_accent_1 }}{% endif %};
+        --gradient-base-accent-2: {% if settings.gradient_accent_2 != blank %}{{ settings.gradient_accent_2 }}{% else %}{{ settings.colors_accent_2 }}{% endif %};
+
+        --media-padding: {{ settings.media_padding }}px;
+        --media-border-opacity: {{ settings.media_border_opacity | divided_by: 100.0 }};
+        --media-border-width: {{ settings.media_border_thickness }}px;
+        --media-radius: {{ settings.media_radius }}px;
+        --media-shadow-opacity: {{ settings.media_shadow_opacity | divided_by: 100.0 }};
+        --media-shadow-horizontal-offset: {{ settings.media_shadow_horizontal_offset }}px;
+        --media-shadow-vertical-offset: {{ settings.media_shadow_vertical_offset }}px;
+        --media-shadow-blur-radius: {{ settings.media_shadow_blur }}px;
+        --media-shadow-visible: {% if settings.media_shadow_opacity > 0 %}1{% else %}0{% endif %};
+
+        --page-width: {{ settings.page_width | divided_by: 10 }}rem;
+        --page-width-margin: {% if settings.page_width == '1600' %}2{% else %}0{% endif %}rem;
+
+        --product-card-image-padding: {{ settings.card_image_padding | divided_by: 10.0 }}rem;
+        --product-card-corner-radius: {{ settings.card_corner_radius | divided_by: 10.0 }}rem;
+        --product-card-text-alignment: {{ settings.card_text_alignment }};
+        --product-card-border-width: {{ settings.card_border_thickness | divided_by: 10.0 }}rem;
+        --product-card-border-opacity: {{ settings.card_border_opacity | divided_by: 100.0 }};
+        --product-card-shadow-opacity: {{ settings.card_shadow_opacity | divided_by: 100.0 }};
+        --product-card-shadow-visible: {% if settings.card_shadow_opacity > 0 %}1{% else %}0{% endif %};
+        --product-card-shadow-horizontal-offset: {{ settings.card_shadow_horizontal_offset | divided_by: 10.0 }}rem;
+        --product-card-shadow-vertical-offset: {{ settings.card_shadow_vertical_offset | divided_by: 10.0 }}rem;
+        --product-card-shadow-blur-radius: {{ settings.card_shadow_blur | divided_by: 10.0 }}rem;
+
+        --collection-card-image-padding: {{ settings.collection_card_image_padding | divided_by: 10.0 }}rem;
+        --collection-card-corner-radius: {{ settings.collection_card_corner_radius | divided_by: 10.0 }}rem;
+        --collection-card-text-alignment: {{ settings.collection_card_text_alignment }};
+        --collection-card-border-width: {{ settings.collection_card_border_thickness | divided_by: 10.0 }}rem;
+        --collection-card-border-opacity: {{ settings.collection_card_border_opacity | divided_by: 100.0 }};
+        --collection-card-shadow-opacity: {{ settings.collection_card_shadow_opacity | divided_by: 100.0 }};
+        --collection-card-shadow-visible: {% if settings.collection_card_shadow_opacity > 0 %}1{% else %}0{% endif %};
+        --collection-card-shadow-horizontal-offset: {{ settings.collection_card_shadow_horizontal_offset | divided_by: 10.0 }}rem;
+        --collection-card-shadow-vertical-offset: {{ settings.collection_card_shadow_vertical_offset | divided_by: 10.0 }}rem;
+        --collection-card-shadow-blur-radius: {{ settings.collection_card_shadow_blur | divided_by: 10.0 }}rem;
+
+        --blog-card-image-padding: {{ settings.blog_card_image_padding | divided_by: 10.0 }}rem;
+        --blog-card-corner-radius: {{ settings.blog_card_corner_radius | divided_by: 10.0 }}rem;
+        --blog-card-text-alignment: {{ settings.blog_card_text_alignment }};
+        --blog-card-border-width: {{ settings.blog_card_border_thickness | divided_by: 10.0 }}rem;
+        --blog-card-border-opacity: {{ settings.blog_card_border_opacity | divided_by: 100.0 }};
+        --blog-card-shadow-opacity: {{ settings.blog_card_shadow_opacity | divided_by: 100.0 }};
+        --blog-card-shadow-visible: {% if settings.blog_card_shadow_opacity > 0 %}1{% else %}0{% endif %};
+        --blog-card-shadow-horizontal-offset: {{ settings.blog_card_shadow_horizontal_offset | divided_by: 10.0 }}rem;
+        --blog-card-shadow-vertical-offset: {{ settings.blog_card_shadow_vertical_offset | divided_by: 10.0 }}rem;
+        --blog-card-shadow-blur-radius: {{ settings.blog_card_shadow_blur | divided_by: 10.0 }}rem;
+
+        --badge-corner-radius: {{ settings.badge_corner_radius | divided_by: 10.0 }}rem;
+
+        --popup-border-width: {{ settings.popup_border_thickness }}px;
+        --popup-border-opacity: {{ settings.popup_border_opacity | divided_by: 100.0 }};
+        --popup-corner-radius: {{ settings.popup_corner_radius }}px;
+        --popup-shadow-opacity: {{ settings.popup_shadow_opacity | divided_by: 100.0 }};
+        --popup-shadow-horizontal-offset: {{ settings.popup_shadow_horizontal_offset }}px;
+        --popup-shadow-vertical-offset: {{ settings.popup_shadow_vertical_offset }}px;
+        --popup-shadow-blur-radius: {{ settings.popup_shadow_blur }}px;
+
+        --drawer-border-width: {{ settings.drawer_border_thickness }}px;
+        --drawer-border-opacity: {{ settings.drawer_border_opacity | divided_by: 100.0 }};
+        --drawer-shadow-opacity: {{ settings.drawer_shadow_opacity | divided_by: 100.0 }};
+        --drawer-shadow-horizontal-offset: {{ settings.drawer_shadow_horizontal_offset }}px;
+        --drawer-shadow-vertical-offset: {{ settings.drawer_shadow_vertical_offset }}px;
+        --drawer-shadow-blur-radius: {{ settings.drawer_shadow_blur }}px;
+
+        --spacing-sections-desktop: {{ settings.spacing_sections }}px;
+        --spacing-sections-mobile: {% if settings.spacing_sections < 24 %}{{ settings.spacing_sections }}{% else %}{{ settings.spacing_sections | times: 0.7 | round | at_least: 20 }}{% endif %}px;
+
+        --grid-desktop-vertical-spacing: {{ settings.spacing_grid_vertical }}px;
+        --grid-desktop-horizontal-spacing: {{ settings.spacing_grid_horizontal }}px;
+        --grid-mobile-vertical-spacing: {{ settings.spacing_grid_vertical | divided_by: 2 }}px;
+        --grid-mobile-horizontal-spacing: {{ settings.spacing_grid_horizontal | divided_by: 2 }}px;
+
+        --text-boxes-border-opacity: {{ settings.text_boxes_border_opacity | divided_by: 100.0 }};
+        --text-boxes-border-width: {{ settings.text_boxes_border_thickness }}px;
+        --text-boxes-radius: {{ settings.text_boxes_radius }}px;
+        --text-boxes-shadow-opacity: {{ settings.text_boxes_shadow_opacity | divided_by: 100.0 }};
+        --text-boxes-shadow-visible: {% if settings.text_boxes_shadow_opacity > 0 %}1{% else %}0{% endif %};
+        --text-boxes-shadow-horizontal-offset: {{ settings.text_boxes_shadow_horizontal_offset }}px;
+        --text-boxes-shadow-vertical-offset: {{ settings.text_boxes_shadow_vertical_offset }}px;
+        --text-boxes-shadow-blur-radius: {{ settings.text_boxes_shadow_blur }}px;
+
+        --buttons-radius: {{ settings.buttons_radius }}px;
+        --buttons-radius-outset: {% if settings.buttons_radius > 0 %}{{ settings.buttons_radius | plus: settings.buttons_border_thickness }}{% else %}0{% endif %}px;
+        --buttons-border-width: {% if settings.buttons_border_opacity > 0 %}{{ settings.buttons_border_thickness }}{% else %}0{% endif %}px;
+        --buttons-border-opacity: {{ settings.buttons_border_opacity | divided_by: 100.0 }};
+        --buttons-shadow-opacity: {{ settings.buttons_shadow_opacity | divided_by: 100.0 }};
+        --buttons-shadow-visible: {% if settings.buttons_shadow_opacity > 0 %}1{% else %}0{% endif %};
+        --buttons-shadow-horizontal-offset: {{ settings.buttons_shadow_horizontal_offset }}px;
+        --buttons-shadow-vertical-offset: {{ settings.buttons_shadow_vertical_offset }}px;
+        --buttons-shadow-blur-radius: {{ settings.buttons_shadow_blur }}px;
+        --buttons-border-offset: {% if settings.buttons_radius > 0 or settings.buttons_shadow_opacity > 0 %}0.3{% else %}0{% endif %}px;
+
+        --inputs-radius: {{ settings.inputs_radius }}px;
+        --inputs-border-width: {{ settings.inputs_border_thickness }}px;
+        --inputs-border-opacity: {{ settings.inputs_border_opacity | divided_by: 100.0 }};
+        --inputs-shadow-opacity: {{ settings.inputs_shadow_opacity | divided_by: 100.0 }};
+        --inputs-shadow-horizontal-offset: {{ settings.inputs_shadow_horizontal_offset }}px;
+        --inputs-margin-offset: {% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_opacity > 0 %}{{ settings.inputs_shadow_vertical_offset | abs }}{% else %}0{% endif %}px;
+        --inputs-shadow-vertical-offset: {{ settings.inputs_shadow_vertical_offset }}px;
+        --inputs-shadow-blur-radius: {{ settings.inputs_shadow_blur }}px;
+        --inputs-radius-outset: {% if settings.inputs_radius > 0 %}{{ settings.inputs_radius | plus: settings.inputs_border_thickness }}{% else %}0{% endif %}px;
+
+        --variant-pills-radius: {{ settings.variant_pills_radius }}px;
+        --variant-pills-border-width: {{ settings.variant_pills_border_thickness }}px;
+        --variant-pills-border-opacity: {{ settings.variant_pills_border_opacity | divided_by: 100.0 }};
+        --variant-pills-shadow-opacity: {{ settings.variant_pills_shadow_opacity | divided_by: 100.0 }};
+        --variant-pills-shadow-horizontal-offset: {{ settings.variant_pills_shadow_horizontal_offset }}px;
+        --variant-pills-shadow-vertical-offset: {{ settings.variant_pills_shadow_vertical_offset }}px;
+        --variant-pills-shadow-blur-radius: {{ settings.variant_pills_shadow_blur }}px;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+
+      html {
+        box-sizing: border-box;
+        font-size: calc(var(--font-body-scale) * 62.5%);
+        height: 100%;
+      }
+
+      body {
+        display: grid;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-columns: 100%;
+        min-height: 100%;
+        margin: 0;
+        font-size: 1.5rem;
+        letter-spacing: 0.06rem;
+        line-height: calc(1 + 0.8 / var(--font-body-scale));
+        font-family: var(--font-body-family);
+        font-style: var(--font-body-style);
+        font-weight: var(--font-body-weight);
+      }
+
+      @media screen and (min-width: 750px) {
+        body {
+          font-size: 1.6rem;
+        }
+      }
+    {% endstyle %}
+
+    {{ 'base.css' | asset_url | stylesheet_tag }}
+
+    {%- unless settings.type_body_font.system? -%}
+      <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
+    {%- endunless -%}
+    {%- unless settings.type_header_font.system? -%}
+      <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
+    {%- endunless -%}
+
+    {%- if settings.predictive_search_enabled -%}
+      <link
+        rel="stylesheet"
+        href="{{ 'component-predictive-search.css' | asset_url }}"
+        media="print"
+        onload="this.media='all'"
+      >
+    {%- endif -%}
+
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+      if (Shopify.designMode) {
+        document.documentElement.classList.add('shopify-design-mode');
+      }
+    </script>
+  </head>
+  {% if customer %}
+    <script type="module" src="{{ 'update-cart-resveration.js' | asset_url }}" defer="defer"></script>
+    <script>
+      async function getFacebookAccount(shopifyId) {
+        const response = await fetch(`${RESERVE_PRODUCT_BASE_URL}/api/customer?shopify_id=${shopifyId}`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+        });
+        if (response.status == 404) {
+          return null;
+        } else {
+          return (await response.json()).data;
+        }
+      }
+    </script>
+    <script type="module" src="{{ 'itemTemplate.js' | asset_url }}" defer="defer"></script>
+  {% endif %}
+  <body class="gradient">
+    <a class="skip-to-content-link button visually-hidden" href="#MainContent">
+      {{ 'accessibility.skip_to_text' | t }}
+    </a>
+
+    {%- if settings.cart_type == 'drawer' -%}
+      {%- render 'cart-drawer' -%}
+    {%- endif -%}
+
+    {% section 'announcement-bar' %}
+    {% section 'header' %}
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
+
+    {% section 'footer' %}
+
+    <ul hidden>
+      <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
+      <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
+    </ul>
+
+    <script>
+      window.shopUrl = '{{ request.origin }}';
+      window.routes = {
+        cart_add_url: '{{ routes.cart_add_url }}',
+        cart_change_url: '{{ routes.cart_change_url }}',
+        cart_update_url: '{{ routes.cart_update_url }}',
+        cart_url: '{{ routes.cart_url }}',
+        predictive_search_url: '{{ routes.predictive_search_url }}',
+      };
+
+      window.cartStrings = {
+        error: `{{ 'sections.cart.cart_error' | t }}`,
+        quantityError: `{{ 'sections.cart.cart_quantity_error_html' | t: quantity: '[quantity]' }}`,
+      };
+
+      window.variantStrings = {
+        addToCart: `{{ 'products.product.add_to_cart' | t }}`,
+        soldOut: `{{ 'products.product.sold_out' | t }}`,
+        unavailable: `{{ 'products.product.unavailable' | t }}`,
+      };
+
+      window.accessibilityStrings = {
+        imageAvailable: `{{ 'products.product.media.image_available' | t: index: '[index]' }}`,
+        shareSuccess: `{{ 'general.share.success_message' | t }}`,
+        pauseSlideshow: `{{ 'sections.slideshow.pause_slideshow' | t }}`,
+        playSlideshow: `{{ 'sections.slideshow.play_slideshow' | t }}`,
+      };
+    </script>
+    <script>
+      var data;
+      for (var i = 0; i < document.scripts.length; i++) {
+        if (document.scripts[i].type == 'application/ld+json' && document.scripts[i].innerHTML.search('"sku"') > -1) {
+          data = JSON.parse(document.scripts[i].innerHTML);
+          console.log(data);
+        }
+      }
+      document.getElementsByClassName('script-linky')[3].innerText = data?.sku;
+    </script>
+    {%- if settings.predictive_search_enabled -%}
+      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
+
+    <!-- BeginCFFPersistentCartCart -->
+    {% if customer %}
+      <script>
+        window.cffCustomer = {
+          name: '{{customer.name}}',
+          email: '{{customer.email}}',
+          hasAccount: '{{customer.has_account}}',
+          id: '{{customer.id}}',
+        };
+      </script>
+    {% endif %}
+
+    <script>
+      window.cffPCLiquidPlaced = true;
+    </script>
+
+    <!-- EndCFFPersistentCartCart -->
+
+    <script src="{{ 'cart-resveration.js' | asset_url }}" async></script>
+  </body>
+</html>
+
+
+
+
+<script src="https://checkypro.robustapps.net/checkypro/redirect.js?shop={{ shop.permanent_domain }}"></script>

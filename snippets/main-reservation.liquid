@@ -1,0 +1,82 @@
+<!-- sections/reserved-products.liquid -->
+{% comment %} <script src="{{ 'update-cart-resveration.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+{{ 'reserved-products.css' | asset_url | stylesheet_tag }}
+
+<div class="timer-container">
+  <div class="time-text" id="time-remaining"></div>
+</div>
+<div class="page-width">
+  <div class="cart">
+    <div class="header-content">
+  <h1>Reserved Products</h1>
+        </div>
+    <div class="cart__items">
+      <div class="loading-overlay hidden" id="loading-overlay">
+        <div class="loading-overlay__spinner">
+          <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+            <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+          </svg>
+        </div>
+      </div>
+      <table class="js-contents">
+        <thead id="table-header-resveration">
+          <tr>
+            <th>Image</th>
+            <th>Details</th>
+            <th class="right">Totals</th>
+            <th>Quantity</th>
+            <th class="right">Totals</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Cart items will be dynamically inserted here -->
+        </tbody>
+      </table>
+
+      </div>
+  </div>
+  
+  {% comment %} // footer  {% endcomment %}
+  <div class="cart__ctas" {{ block.shopify_attributes }} style="width: 100%; display: flex; align-items: center; justify-content: flex-end; margin-top; 30px">
+    <a href="" id="reservation-checkout">
+      <button
+        id="reservation-checkout-button"
+        class="button"
+        name="reservation-checkout-button"
+        style="background-color: white; color: black; width: 100%">
+        Checkout
+      <!-- Static reservation button text -->
+      </button>
+      </a>
+    </div>
+ 
+  </div>
+
+  
+
+<script>
+const totalTime = 2 * 60 * 60; // total time in seconds (2 hours)
+let timeRemaining = totalTime;
+
+const timeDisplay = document.getElementById('time-remaining');
+console.log('totalTime',totalTime)
+function updateTimer() {
+
+  const hours = Math.floor(timeRemaining / 3600);
+  const minutes = Math.floor((timeRemaining % 3600) / 60);
+  const seconds = timeRemaining % 60;
+  timeDisplay.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  console.log('timeRemaining',timeRemaining)
+  if (timeRemaining > 0) {
+    timeRemaining--;
+    setTimeout(updateTimer, 1000);
+  } else {
+    // Actions to take when time runs out
+    alert("Time is up! Your cart will be emptied.");
+  }
+}
+
+// Initialize the timer
+updateTimer();
+</script>
+

@@ -1,0 +1,402 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "768d2e1c-5c93-4ff4-aa9e-79025cda47de": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16662846112002__768d2e1c-5c93-4ff4-aa9e-79025cda47de-1674197270a26ce995-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "template--16662846112002__768d2e1c-5c93-4ff4-aa9e-79025cda47de-1674197270a26ce995-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": ""
+          }
+        },
+        "template--16662846112002__768d2e1c-5c93-4ff4-aa9e-79025cda47de-1674197270a26ce995-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Search for anything",
+            "button_link": "https://www.hotsy-totsy.com/search",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "template--16662846112002__768d2e1c-5c93-4ff4-aa9e-79025cda47de-1674197270a26ce995-0",
+        "template--16662846112002__768d2e1c-5c93-4ff4-aa9e-79025cda47de-1674197270a26ce995-1",
+        "template--16662846112002__768d2e1c-5c93-4ff4-aa9e-79025cda47de-1674197270a26ce995-2"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "1ec55142-2261-4794-8388-4c4dae36a8a5": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16662846112002__1ec55142-2261-4794-8388-4c4dae36a8a5-16741923709da80d78-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Copy_of_Add_a_heading_44.png",
+            "title": "Possible Exclusives!!",
+            "text": "",
+            "link_label": "Click here...",
+            "link": "shopify://collections/possible-exclusives"
+          }
+        },
+        "column_Lyjfca": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/1_f258ee23-c439-433e-9710-3c6d17a0544a.png",
+            "title": "",
+            "text": "",
+            "link_label": "Click here...",
+            "link": "shopify://collections/monday-paparazzi-jewelry-new-releases"
+          }
+        },
+        "template--16662846112002__1ec55142-2261-4794-8388-4c4dae36a8a5-16741923709da80d78-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2_4ac300fd-5940-4afd-86e0-752224796283.png",
+            "title": "",
+            "text": "",
+            "link_label": "Click here...",
+            "link": "shopify://collections/tuesday-paparazzi-jewelry-new-releases"
+          }
+        },
+        "column_FmdYEU": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/3_b6ae453c-96f6-4e8d-8a89-fc2dd12e53a1.png",
+            "title": "",
+            "text": "",
+            "link_label": "Click here...",
+            "link": "shopify://collections/wednesday-paparazzi-jewelry-new-releases"
+          }
+        },
+        "column_DJfYjw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/4_95404b34-2067-46b7-8f64-22eb52b40d3e.png",
+            "title": "",
+            "text": "",
+            "link_label": "Click here...",
+            "link": "shopify://collections/thursday-paparazzi-jewelry-new-releases"
+          }
+        },
+        "template--16662846112002__1ec55142-2261-4794-8388-4c4dae36a8a5-16741923709da80d78-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/5_1e8197a2-817a-42f2-a13e-1ab4a9dc19fa.png",
+            "title": "",
+            "text": "",
+            "link_label": "Click here...",
+            "link": "shopify://collections/friday-paparazzi-jewelry-new-releases"
+          }
+        },
+        "c19a28c7-5272-4b9e-bac3-a386979a6e38": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Lisa_s_Paparazzi_3000_x_1000_px_1000_x_1000_px_1_bd042c57-488a-4f35-9d99-b2eb26a7910c.png",
+            "title": "",
+            "text": "<p>12 years strong...</p>",
+            "link_label": "Read more",
+            "link": "https://www.hotsy-totsy.com/about"
+          }
+        }
+      },
+      "block_order": [
+        "template--16662846112002__1ec55142-2261-4794-8388-4c4dae36a8a5-16741923709da80d78-2",
+        "column_Lyjfca",
+        "template--16662846112002__1ec55142-2261-4794-8388-4c4dae36a8a5-16741923709da80d78-0",
+        "column_FmdYEU",
+        "column_DJfYjw",
+        "template--16662846112002__1ec55142-2261-4794-8388-4c4dae36a8a5-16741923709da80d78-1",
+        "c19a28c7-5272-4b9e-bac3-a386979a6e38"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "title": "Have you seen today's NEW??",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 5,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 8
+      }
+    },
+    "e802e5fb-d31a-45b9-8cc9-f56f15b3108e": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/Lisa_s_Paparazzi_1.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": true,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "subtitle"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Search for Anything",
+            "button_link_1": "http://www.hotsy-totsy.com/search",
+            "button_style_secondary_1": false,
+            "button_label_2": "See this Featured Product",
+            "button_link_2": "shopify://products/glittering-geometrics-purple-p2st-prxx-142xx",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "disabled": true,
+      "custom_css": [
+
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Lisa_s_Paparazzi_3000_x_1000_px_1000_x_1000_px_2.png",
+        "image_2": "shopify://shop_images/320039552_1236406020246445_2838884927057251149_n.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "bottom-right",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "accent-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li><em><strong>SHOP:</strong></em> If you don't know where to start, try the \"Get Started Here\" categories below!</li><li><em><strong>LEARN:</strong></em> Follow me on <a href=\"https://www.youtube.com/c/lisaabercrombie\" target=\"_blank\" title=\"https://www.youtube.com/c/lisaabercrombie\">YouTube</a> and <a href=\"https://www.facebook.com/learnfromlisaabercrombie\" target=\"_blank\" title=\"https://www.facebook.com/learnfromlisaabercrombie\">Facebook</a> for lots of free trainings about selling!</li><li><em><strong>MAKE MONEY:</strong></em> <a href=\"https://www.hotsy-totsy.com/pages/contact\" title=\"https://www.hotsy-totsy.com/pages/contact\">Contact me</a> to learn more about selling this cute jewelry. It is the best job ever!</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Get Started Here:",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "popular-picks-1",
+        "products_to_show": 12,
+        "columns_desktop": 5,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "accent-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "collage": {
+      "type": "collage",
+      "blocks": {
+        "collection-0": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "product": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "second_image": false
+          }
+        },
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection-0",
+        "product",
+        "collection-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Multimedia collage",
+        "heading_size": "h2",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "video": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column1": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column2": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column1",
+        "column2"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".powrChatBubble {position: fixed; z-index: 999991; right: 10px; bottom: 10px; cursor: pointer;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "768d2e1c-5c93-4ff4-aa9e-79025cda47de",
+    "1ec55142-2261-4794-8388-4c4dae36a8a5",
+    "e802e5fb-d31a-45b9-8cc9-f56f15b3108e",
+    "image_banner",
+    "rich_text",
+    "featured_collection",
+    "collage",
+    "video",
+    "multicolumn"
+  ]
+}

@@ -1,0 +1,174 @@
+<div id="facebook-detail" style="display: none;  align-items: center;">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    height="18px"
+    width="18px"
+    version="1.1"
+    id="Layer_1"
+    viewBox="0 0 291.319 291.319"
+    xml:space="preserve"
+  >
+    <g>
+    	<path style="fill:#3B5998;" d="M145.659,0c80.45,0,145.66,65.219,145.66,145.66c0,80.45-65.21,145.659-145.66,145.659   S0,226.109,0,145.66C0,65.219,65.21,0,145.659,0z"/>
+    	<path style="fill:#FFFFFF;" d="M163.394,100.277h18.772v-27.73h-22.067v0.1c-26.738,0.947-32.218,15.977-32.701,31.763h-0.055   v13.847h-18.207v27.156h18.207v72.793h27.439v-72.793h22.477l4.342-27.156h-26.81v-8.366   C154.791,104.556,158.341,100.277,163.394,100.277z"/>
+    </g>
+  </svg>
+  <span id="person-name" style="margin-left: 10px;line-height: 1;"></span>
+</div>
+<div id="FBiframeWrapper"></div>
+<div
+  id="delete-facebook-auth"
+  style="cursor: pointer; font-size: 11px; background-color: #ce1818; color: white; box-shadow: none; padding: 2px 6px; font-weight: bold; border-radius: 4px; display: none; align-items: center; gap: 2px;"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20 6a1 1 0 0 1 .117 1.993l-.117 .007h-.081l-.919 11a3 3 0 0 1 -2.824 2.995l-.176 .005h-8c-1.598 0 -2.904 -1.249 -2.992 -2.75l-.005 -.167l-.923 -11.083h-.08a1 1 0 0 1 -.117 -1.993l.117 -.007h16z" /><path d="M14 2a2 2 0 0 1 2 2a1 1 0 0 1 -1.993 .117l-.007 -.117h-4l-.007 .117a1 1 0 0 1 -1.993 -.117a2 2 0 0 1 1.85 -1.995l.15 -.005h4z" />
+  </svg>
+  <span>Remove facebook authorization</span>
+</div>
+
+<style>
+  #FBiframeWrapper .fb_iframe_widget {
+    display: flex;
+  }
+</style>
+
+<script>
+  const customerIdMetaTag = document.querySelector('meta[name="customer-id"]');
+  const customerId = customerIdMetaTag.getAttribute('data-customer-id');
+  const deleteFacebookAuthButton = document.getElementById('delete-facebook-auth');
+
+  deleteFacebookAuthButton.addEventListener('click', async () => {
+    deleteFacebookAuthButton.disabled = true;
+    deleteFacebookAuthButton.innerHTML = 'Deleting...';
+
+    try {
+      let deleteAccountMessage = await deleteFacebookAccount(customerId);
+
+      if (deleteAccountMessage) {
+        showToast(deleteAccountMessage);
+        localStorage.removeItem('customerName');
+        await getCurrentStatus();
+      }
+    } catch (error) {
+      console.error('Error deleting Facebook account:', error);
+      showToast('Error deleting Facebook account');
+    } finally {
+      deleteFacebookAuthButton.disabled = false;
+      deleteFacebookAuthButton.innerHTML = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M20 6a1 1 0 0 1 .117 1.993l-.117 .007h-.081l-.919 11a3 3 0 0 1 -2.824 2.995l-.176 .005h-8c-1.598 0 -2.904 -1.249 -2.992 -2.75l-.005 -.167l-.923 -11.083h-.08a1 1 0 0 1 -.117 -1.993l.117 -.007h16z" />
+        <path d="M14 2a2 2 0 0 1 2 2a1 1 0 0 1 -1.993 .117l-.007 -.117h-4l-.007 .117a1 1 0 0 1 -1.993 -.117a2 2 0 0 1 1.85 -1.995l.15 -.005h4z" />
+      </svg>
+      <span>Remove Facebook Authorization</span>
+    `;
+    }
+  });
+
+  async function getCurrentStatus() {
+    let facebookAccountInfo = await getFacebookAccount(customerId);
+    
+    if (facebookAccountInfo) {
+      console.log(facebookAccountInfo, "facebookAccountInfo")
+      fbIframeInit(true);
+      document.getElementById('facebook-detail').style.display = 'flex';
+      document.getElementById(
+        'person-name'
+      ).innerHTML = `<span style="font-weight: bold;">${facebookAccountInfo.facebook_name}</span>`;
+      deleteFacebookAuthButton.style.display = 'flex';
+      return;
+    } else {
+      document.getElementById('facebook-detail').style.display = 'none';
+    }
+    fbIframeInit(false);
+  }
+  getCurrentStatus();
+
+  function fbIframeInit(reauthorize) {
+    // insert this fb login button into page
+    // <fb:login-button scope="public_profile" onlogin="checkLoginState();" class="facebook-button" login_text="Authorize your account"> </fb:login-button>
+    let fbIframeWrapper = document.getElementById('FBiframeWrapper');
+    let text = reauthorize ? 'Re-authorize?' : 'Authorize your account';
+    fbIframeWrapper.innerHTML = `<fb:login-button scope="public_profile" onlogin="checkLoginState();" class="facebook-button" login_text="${text}"> </fb:login-button>`;
+    let script = document.createElement('script');
+    script.async = true;
+    script.defer = true;
+    script.crossorigin = 'anonymous';
+    script.src = 'https://connect.facebook.net/en_US/sdk.js';
+    document.body.appendChild(script);
+  }
+
+  async function statusChangeCallback(response) {
+    console.log('response statusChangeCallback', response);
+    if (response.status === 'connected') {
+      FB.api('/me', async function (userInfo) {
+        await saveFacebookAccount(userInfo.name, customerId, userInfo.id);
+      });
+    }
+  }
+
+  function checkLoginState() {
+    FB.getLoginStatus(function (response) {
+      statusChangeCallback(response);
+    });
+  }
+
+  window.fbAsyncInit = function () {
+    FB.init({
+      appId: '3678933285602039',
+      cookie: true,
+      xfbml: true,
+      version: 'v26.0',
+    });
+
+    FB.getLoginStatus(function (response) {
+      statusChangeCallback(response);
+    });
+  };
+
+  async function deleteFacebookAccount(shopifyId) {
+    try {
+      const response = await fetch(`${RESERVE_PRODUCT_BASE_URL}/api/customer`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({ shopify_id: shopifyId }),
+      });
+
+      if (response.status === 404) {
+        return null;
+      } else if (!response.ok) {
+        throw new Error('Failed to delete Facebook account.');
+      }
+
+      // Instead of returning null, we return the message or handle the successful deletion
+      const responseData = await response.json();
+      return responseData.message; // You can return the success message
+    } catch (error) {
+      console.error('Error deleting Facebook account:', error);
+      throw error;
+    }
+  }
+
+  async function saveFacebookAccount(name, shopify_id, facebook_id) {
+    console.log('baseUrl', `${RESERVE_PRODUCT_BASE_URL}`);
+    console.log('name', name);
+    const response = await fetch(`${RESERVE_PRODUCT_BASE_URL}/api/customer`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify({
+        shopify_id: shopify_id,
+        facebook_id: facebook_id,
+        name: name,
+      }),
+    });
+    console.log('data', response.json());
+    return response.json().data;
+  }
+</script>

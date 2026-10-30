@@ -1,0 +1,158 @@
+<!-- sections/reserved-products.liquid -->
+{% comment %}
+  <script src="{{ 'update-cart-resveration.js' | asset_url }}" defer="defer"></script>
+{% endcomment %}
+{{ 'component-cart.css' | asset_url | stylesheet_tag }}
+{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}
+{{ 'component-totals.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'component-discounts.css' | asset_url | stylesheet_tag }}
+{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+{{ 'reserved-products.css' | asset_url | stylesheet_tag }}
+<style type="text/css">
+  .template-404 .title + * {
+    margin-top: 1rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .template-404 .title + * {
+      margin-top: 2rem;
+    }
+  }
+</style>
+
+<div class="page-width" style="position: relative;">
+  {% assign current_url_path = request.path %}
+  {% if current_url_path == '/pages/reserved-products' %}
+    {% if customer == null %}
+      <div class="template-404 page-width page-margin center">
+        <p>You need to be logged in to view your reserved products.</p>
+        <h1 class="title">
+          In order to see your invoice,
+          <a href="#" id="login-link">MUST LOGIN</a>.
+        </h1>
+      </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const loginLink = document.getElementById('login-link');
+          if (loginLink) {
+            loginLink.href = `/account/login?redirect=${encodeURIComponent(window.location.href)}`;
+          }
+        });
+      </script>
+    {% else %}
+      <div class="cart">
+        <div id="reserve-page-title">
+          <div class="title-wrapper-with-link">
+            <h1 class="title title--primary">Your Reserved Products</h1>
+            <div class="underlined-link" style="text-decoration: none" id="timer-countdown-container">
+              This is your reserved order, it is due by <span id="timer-countdown"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart__contents critical-hidden">
+          <div class="cart__items">
+            <div class="js-contents">
+              <table class="cart-items">
+                <tbody id="reserved-table-body">
+                  <!-- Dynamic data will be inserted here -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="loading-container" id="loading-container">
+          <div class="loading-overlay_spinner_reserved_products">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              role="presentation"
+              class="spinner"
+              viewBox="0 0 66 66"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      {% comment %} /// cart footer {% endcomment %}
+      <div class="cart__footer" id="reserved-product-footer">
+        <div class="cart__blocks">
+          <div class="js-contents">
+            <div class="totals">
+              <h2 class="totals__subtotal">Discount</h2>
+              <p class="totals__subtotal-value" id="total-discount-reserved-products">0</p>
+            </div>
+            <div class="totals">
+              <h2 class="totals__subtotal">Subtotal</h2>
+              <p class="totals__subtotal-value" id="subtotal-price-reserved-products">0</p>
+            </div>
+            <div class="totals">
+              <h2 class="totals__subtotal">Estimated tax</h2>
+              <p class="totals__subtotal-value" id="total-tax-reserved-products">0</p>
+            </div>
+            <div class="totals">
+              <h2 class="totals__subtotal">Total</h2>
+              <p class="totals__subtotal-value" id="total-price-reserved-products">0</p>
+            </div>
+
+            <div></div>
+
+            <small class="tax-note caption-large rte"
+              >Taxes and <a href="/policies/shipping-policy">shipping</a> calculated at checkout
+            </small>
+          </div>
+
+          {% comment %} // footer {% endcomment %}
+          <div class="cart__ctas">
+            <a href="" id="reservation-checkout" style="width: 100%">
+              <button
+                id="reservation-checkout-button"
+                class="button"
+                name="reservation-checkout-button"
+                style="background-color: white; color: black; width: 100%; margin-bottom : 30px;"
+              >
+                Checkout reserved items
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endif %}
+
+  <div
+    class="confirmation-modal-container modal-hidden"
+  >
+    <div class="confirmation-modal-content" id="confirmation-modal">
+      <button class="confirmation-modal-close">✖</button>
+      <p>Warning: You are attempting to delete a product from your invoice. This is not recommended. Are you sure?</p>
+      <button class="confirmation-modal-accept button">Confirm</button>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Reserved Products Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Reserved Items"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Reserved Products",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
