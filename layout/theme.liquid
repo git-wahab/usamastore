@@ -355,11 +355,11 @@
             Accept: 'application/json',
           },
         });
-        if (response.status == 404) {
-          return null;
-        } else {
-          return (await response.json()).data;
+        if (!response.ok) {
+          throw new Error('Failed to fetch Facebook account.');
         }
+        const json = await response.json();
+        return json.error ? null : json.data;
       }
     </script>
     <script type="module" src="{{ 'itemTemplate.js' | asset_url }}" defer="defer"></script>

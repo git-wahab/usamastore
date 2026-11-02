@@ -134,7 +134,13 @@ or customer.tags contains 'lvl5'
     const announcementBar = document.querySelector('.announcement-bar-facebook');
     const customerId = announcementBar.getAttribute('customerId');
 
-    let facebookAccountInfo = await getFacebookAccount(customerId);
+    let facebookAccountInfo;
+    try {
+      facebookAccountInfo = await getFacebookAccount(customerId);
+    } catch (error) {
+      console.error('Error fetching Facebook account:', error);
+      return;
+    }
 
     if (facebookAccountInfo) {
       announcementBar.style.display = 'none';
